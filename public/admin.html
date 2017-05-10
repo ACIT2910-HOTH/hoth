@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Admin Page</title>
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -12,12 +13,12 @@
 		<script src="js/admin.js"></script>
 		<link rel="stylesheet" href="/css/navigation.css"/>
 		<link rel="stylesheet" href="/css/footer.css"/>
-		
+		<link rel="stylesheet" href="/css/scrollbar.css"/>
         
 	</head>
     
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <nav id="navigation" class="navbar navbar-fixed-top">
+        <nav id="navigation" class="navbar navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <div id="logo" class="navbar-brand"></div>
@@ -36,114 +37,95 @@
                         <li><a id="appetizer_link" href="#appetizers" >Appetizers</a></li>
                         <li><a id="drink_link"  href="#drinks">Drinks</a></li>
                         <li><a id="dessert_link"  href="#desserts">Desserts</a></li>
-						
-						
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        
-                        <li><a data-toggle="collapse" data-target="#cart" id="cart_link"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-                        
-                        <!-- If user has id, hide login, else, show profile_link and logout_link -->
-                        
-                        <li><a id="profile_link" href="/public/profile.html">Profile</a></li>
                         <li><a id="logout_link" href="/logout" class="reg">Logout</a></li>
-                        
-                        <li><a id="login" href="/signin" class="reg">Login | Signup</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-		<div id="cart" class="collapse">
-            <div id="holder">
-                <div class="cart_items container-fluid">
-                    <div class="remove col-lg-1 col-md-1 col-sm-2 col-xs-2"><span class="glyphicon glyphicon-remove"></span></div>
-                    <div class="item col-lg-10 col-md-10 col-sm-8 col-xs-8">Burger</div>
-                    <div class="price col-lg-1 col-md-1 col-sm-2 col-xs-2">$50</div>
+        
+		<div id="admin-div" class="container-fluid">
+             <div id="meals" class="container-fluid">
+                <div class="text-center">
+                <p><img id="meal_img" class = "menu_icon" src="/images/hamburger.png" /></p>
+                    <h2>Meals</h2>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="row">
                 </div>
             </div>
-            
-            <button class="btn btn-block" id="checkout">Checkout</button>
-        </div>
-		<div id="admin-div" class="container-fluid">
-		 <div id="meals" class="container-fluid">
-			<div class="text-center">
-			<p><img id="meal_img" class = "menu_icon" src="/images/hamburger.png" /></p>
-                <h2>Meals</h2>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="appetizers" class="container-fluid">
+                <div class="text-center">
+                    <p><img id="appetizer_img" class = "menu_icon" src="/images/appetizer.png" /></p>
+                    <h2>Appetizers</h2>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="row">
+                </div>
             </div>
-            <div class="row">
+            <div id="drinks" class="container-fluid">
+                <div class="text-center">
+                    <p><img id="drinks_img" class = "menu_icon" src="/images/drinks.png" /></p>
+                    <h2>Drinks</h2>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="row">
+                </div>
+            </div>	
+            <div id="desserts" class="container-fluid">
+                <div class="text-center">
+                <p><img id="dessert_img" class = "menu_icon" src="/images/dessert.png" /></p>
+                    <h2>Desserts</h2>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="row">
+                </div>
             </div>
-        </div>
-		<div id="appetizers" class="container-fluid">
-            <div class="text-center">
-				<p><img id="appetizer_img" class = "menu_icon" src="/images/appetizer.png" /></p>
-                <h2>Appetizers</h2>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br>
-            </div>
-			<div class="row">
-			</div>
-		</div>
-		<div id="drinks" class="container-fluid">
-            <div class="text-center">
-				<p><img id="drinks_img" class = "menu_icon" src="/images/drinks.png" /></p>
-                <h2>Drinks</h2>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br>
-            </div>
-            <div class="row">
-            </div>
-        </div>	
-		<div id="desserts" class="container-fluid">
-            <div class="text-center">
-			<p><img id="dessert_img" class = "menu_icon" src="/images/dessert.png" /></p>
-                <h2>Desserts</h2>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br>
-            </div>
-            <div class="row">
-            </div>
-        </div>
 		
-		<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Item Creator</h4>
-        </div>
-        <div class="modal-body">
-			<div class="form-group">
-  				<label for="item-name">Item Name:</label>
-  				<input type="text" class="form-control" id="item-name" placeholder="Item Name">
-				<label for="item-cat">Item Categories:(Select one)</label>
-  					<select class="form-control" id="item-cat">
-    					<option>Appetizers</option>
-    					<option>Desserts</option>
-    					<option>Drinks</option>
-    					<option>Meals</option>
-  					</select>
-				<label for="item-desc">Item Description:</label>
-  				<textarea class="form-control" rows="5" id="item-desc"></textarea>
-				<label for="item-price">Item Price:</label>
-  				<input type="number" class="form-control" id="item-price" placeholder="Item Price">
-				<label for="item-image">Item Image:</label>
-				<input type="file" name="item-image">
-				<button type="button" id="image-submit" class="btn btn-primary" >Submit</button>
-				
-			</div>
-		
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-		  <button type="button" class="btn btn-success" data-dismiss="modal">Okay</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
 
-		<button type="button" id="addbut"class="btn icon-btn btn-success" data-toggle="modal" data-target="#myModal" href="#">
-<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Add</button>	
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Item Creator</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="item-name">Item Name:</label>
+                            <input type="text" class="form-control" id="item-name" placeholder="Item Name">
+                            <label for="item-cat">Item Categories:(Select one)</label>
+                                <select class="form-control" id="item-cat">
+                                    <option>Appetizers</option>
+                                    <option>Desserts</option>
+                                    <option>Drinks</option>
+                                    <option>Meals</option>
+                                </select>
+                            <label for="item-desc">Item Description:</label>
+                            <textarea class="form-control" rows="5" id="item-desc"></textarea>
+                            <label for="item-price">Item Price:</label>
+                            <input type="number" class="form-control" id="item-price" placeholder="Item Price">
+                            <label for="item-image">Item Image:</label>
+                            <input type="file" name="item-image">
+                            <button type="button" id="image-submit" class="btn btn-primary" >Submit</button>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success" data-dismiss="modal">Okay</button>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+
+            <button type="button" id="addbut"class="btn icon-btn btn-success" data-toggle="modal" data-target="#myModal" href="#">
+                <span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Add
+            </button>	
 
 		</div>
 		<div id="foot"></div>
@@ -151,9 +133,9 @@
         
     </body>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
-        <script type="text/javascript">
-           $(document).ready(function(){
-               $('#foot').load('/public/footer.html');
-           });
-        </script>   
+    <script type="text/javascript">
+       $(document).ready(function(){
+           $('#foot').load('/public/footer.html');
+       });
+    </script>   
 </html>

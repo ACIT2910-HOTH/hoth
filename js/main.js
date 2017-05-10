@@ -198,29 +198,47 @@ $(document).ready(function() {
             success:function(resp) {
                 for (var i = 0; i < resp.length; i++) {
                     var container  = document.createElement("div");
-                    container.className = "col-sm-4 col-xs-12";
+                    container.className = "col-lg-2 col-md-4 col-sm-6 col-xs-12";
+                    
                     var panel = document.createElement("div");
                     panel.className = "panel panel-default text-center";
+                    
                     var panelHeading = document.createElement("div");
-                    panelHeading.className = "panel-heading";
-                    panelHeading.innerHTML = "<h1>" + resp[i].item_name + "</h1>";
+                    panelHeading.className = "panel-heading head";
+                    panelHeading.innerHTML = "<h3>" + resp[i].item_name + "</h3>";
+                    
                     var panelBody = document.createElement("div");
-                    panelBody.className = "panel-body";
+                    panelBody.className = "panel-body body";
+                    
+                    var imgHolder = document.createElement("div");
+                    imgHolder.className = "menu_imgs";
+                    
                     var newImg = document.createElement("img");
                     newImg.src = "/images/" + resp[i].filename;
-                    newImg.className = "item_img";
-                    panelBody.appendChild(newImg);
+                    newImg.className = "menu";
+                    imgHolder.appendChild(newImg);
+                    panelBody.appendChild(imgHolder);
+                    
                     var panelFooter = document.createElement("div");
-                    panelFooter.className = "panel-footer";
+                    panelFooter.className = "panel-footer foot";
+                    
                     var h4 = document.createElement("h4");
                     h4.innerHTML = resp[i].description;
+                    
                     var h3 = document.createElement("h3");
                     h3.innerHTML = resp[i].price;
                     panelFooter.appendChild(h4);
                     panelFooter.appendChild(h3);
 
-                    // input
-                    // add button
+                    var input = document.createElement("input");
+                    input.type = "number";
+                    input.className = "form-control";
+                    
+                    var button = document.createElement("button");
+                    button.className = "btn btn-lg";
+                    
+                    panelFooter.appendChild(input);
+                    panelFooter.appendChild(button);
 
                     panel.appendChild(panelHeading);
                     panel.appendChild(panelBody);

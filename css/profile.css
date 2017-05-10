@@ -9,17 +9,6 @@ body {
     text-align: center;
 }
 
-.inputs {
-    background-color: #2F8DB3;
-    color: #FDF8FF;
-    border: 1px solid #2F8DB3;
-}
-
-.inputs:hover {
-    background-color: #2257BF;
-    border: 1px solid #2257BF;
-}
-
 .buttons {
     background-color: #333333;
     color: #FDF8FF;

@@ -10,89 +10,103 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-#container {
-	padding-left: 200px;
-	padding-right: 190px;
-	min-height:100%;
-	position:relative;
-    top: 0;
+.panel {
+    border: 1px solid black !important; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+}
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
 
-#cart {
-    position: fixed;
-    background-color: rgba(150,150,150,0.5);
-    height: 88vh;
-    top: 60px;
-    z-index: 1;
-    right: 0;
-}
-
-#cart_link:hover {
-    background-color: #24292e;
-    color: white;
-}
-
-.cart_items {
-    height: 5%;
-    margin: 1vh;
-    background-color: grey;
-    padding: 0;
-}
-
-#holder {
-    height: 90%;
-    overflow-y: auto;
-}
-
-.remove {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.remove:hover {
-    color: white;
-}
-
-.item {
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.price {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
+/*Menu item div stuff start*/
 #appetizers, #desserts, #drinks, #meals, #about {
-    padding: 100px 25px;
+    padding: 100px 200px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+/*Menu item div stuff end*/
 
-label {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+/*Menu item stuff start*/
+.menu {
+    max-width:100%;
+    max-height:100%;
 }
 
+.menu_imgs {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.panel > .panel-heading {
+    border-top: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-right: 0px solid transparent !important;
+    border-bottom: 1px solid black !important;
+    border-radius: 0px !important;
+}
+
+.panel-body {
+    background-color: grey;
+    border: 0px solid transparent !important;
+}
+
+.panel-footer {
+    background-color: grey !important;
+    border-top: 0px solid transparent !important;
+    border-radius: 0px !important;
+}
+
+.panel-footer h4 {
+    color: #CCC;
+}
+
+.btn {
+    background-color: #333333;
+    color: #FDF8FF;
+    border: 1px solid #333333;
+}
+
+.btn:hover {
+    background-color: black;
+    border: 1px solid black;
+}
+/*Menu item stuff end*/
+
+
+/*About us stuff start*/
+#imghoth{
+    max-width:100%;
+    max-height:100%;
+}
+
+#teamhoth_txt {
+    border-bottom-style: solid;
+}
+/*About us stuff end*/
+
+
+/*Menu icon stuff start*/
+.menu_icon {
+    height: 150px;
+    width: 150px;
+}
+/*Menu icon stuff end*/
+
+
+/*Unknown start*/
 .imgs {
     width: 100%;
     height: 200px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-#imghoth{
-    max-width:100%;
-    max-height:100%;
-}
-
-.menu_icon {
-    
-    height: 150px;
-    width: 150px;
 }
 
 .item_img {
@@ -107,6 +121,75 @@ label {
     clear:left;
 }
 
-#teamhoth_txt {
-    border-bottom-style: solid;
+#container {
+	padding-left: 200px;
+	padding-right: 190px;
+	min-height:100%;
+	position:relative;
+    top: 0;
+}
+/*Unknown end*/
+
+
+/*XS screen size*/
+@media (max-width: 600px) {
+    #appetizers, #desserts, #drinks, #meals, #about {
+        padding: 100px 100px;
+    }
+    
+    .panel {
+        width: 250px;
+    }
+    
+    #about-right {
+        width: 200px;
+    }
+    
+    #about-left {
+        width: 200px;
+    }
+}
+
+
+/*XS screen size*/
+@media (min-width: 601px) and (max-width: 767px) {
+    #appetizers, #desserts, #drinks, #meals {
+        padding: 100px 200px;
+    }
+    
+    #about {
+        padding: 100px;
+    }
+}
+
+
+/*SM screen size*/
+@media (min-width: 768px) and (max-width: 991px) {
+    #appetizers, #desserts, #drinks, #meals {
+        padding: 100px 150px;
+    }
+    
+    #about {
+        padding: 100px 50px;
+    }
+}
+
+
+/*MD screen size*/
+@media (min-width: 992px) and (max-width: 1200px) {
+    #appetizers, #desserts, #drinks, #meals {
+        padding: 100px 150px;
+    }
+    
+    #about {
+        padding: 100px 150px;
+    }
+}
+
+
+/*LG screen size*/
+@media (min-width: 1201px) and (max-width: 1535px) {
+    #appetizers, #desserts, #drinks, #meals, #about {
+        padding: 100px 40px;
+    }
 }

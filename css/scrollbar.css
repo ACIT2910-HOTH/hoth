@@ -1,5 +1,6 @@
 ::-webkit-scrollbar{
     width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track{
@@ -22,4 +23,8 @@
 ::-webkit-scrollbar-track-piece {
     height: 30px;
     width: 30px;
+}
+
+::-webkit-scrollbar-corner:corner-present {
+    background: rgba(51,51,51,0.8);
 }
