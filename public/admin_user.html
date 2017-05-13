@@ -8,11 +8,37 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" href="/css/admin_user.css"/>
+        <link rel="stylesheet" href="/css/scrollbar.css"/>
+        <link rel="stylesheet" href="/css/navigation.css"/>
         <link rel="icon" type="image/png" href="/images/Rebel-50.png"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
     </head>
     
-    <body>
+    <body   >
+        <div id="nav"></div>
         
+        <div id = "container">
+        <h3 id="shop_status_open">Current shop status:<span style = "font-size: 2vw;font-weight:700; color:red;"> OPEN</span> </h3>
+        <h3 id="shop_status_close">Current shop status: <span style = "font-size: 2vw;font-weight:700; color:red;"> CLOSE</span></h3>
+        <button id = "open_shop">Open shop</button>
+        <button id = "close_shop">Close shop</button>
+        <br><br>
+        <button id = "show_coustomer_accounts">Show coustomer accounts</button>
+        <button id = "show_employee_accounts">Show employee accounts</button>
+        <button id = "show_admin_accounts">Show admin accounts</button>
+        
+
+        
+
+        
+        </div>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script>
+            $.get("/public/navbar.html", function(data){
+                $("#nav").replaceWith(data);
+            });
+        </script>
     </body>
 </html>

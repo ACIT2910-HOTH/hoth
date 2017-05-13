@@ -1,0 +1,25 @@
+#shop_status_open{
+    font-size: 2vw;
+    
+    
+}
+
+#shop_status_close{
+    font-size:2vw;
+    
+}
+
+button{
+    font-size: 2vw;
+}
+
+body{
+    background-image: url(/images/Hoth_plains.jpg);
+}
+
+#container{
+        margin: 100px auto;
+    width: 50%;
+    text-align: center;
+    
+}
