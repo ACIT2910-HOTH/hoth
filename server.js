@@ -150,6 +150,109 @@ app.post("/changePassword", function(req, resp) {
     });
 });
 
+//---------------------------Order page --------------------//
+var orders = []
+app.post("/orders",function(req,resp){
+    while(orders.length > 0){
+        orders.pop();
+    }
+    orders.push(req.body.orders)
+    console.log(orders)
+    resp.send({status:"success"})
+    
+});
+
+app.post("/get/orders",function(req,resp){
+    resp.send({
+        status:"success",
+        orders:orders,
+        username: req.session.username
+    })
+}); 
+
+app.post("/get/price",function(req,resp){
+    console.log(req.body);
+    pg.connect(dbURL,function(err,client,done){
+        if(err){
+            console.log(err);
+            resp.send({
+                status:"fail"
+            });
+        }
+        client.query("SELECT item_name,price FROM hoth_items WHERE item_code = $1",[req.body.item],function(err,result){
+            done();
+            
+            if(err){
+                console.log(err);
+                resp.sent({
+                    status:"faile",
+                });
+            }
+            resp.send({
+                status:"success",
+                price:result.rows[0].price,
+                name:result.rows[0].item_name
+            });
+        });
+    });
+         });
+
+app.post("/save/order",function(req,resp){
+    console.log(req.body)
+    pg.connect(dbURL,function(err,client,done){
+        if(err){
+            console.log(err);
+            resp.send({
+                status:"fail",
+                message:"database connection err"});
+        }
+        client.query("INSERT INTO hoth_orders (customer,total_price) VALUES ($1,$2) RETURNING order_id",[req.session.username,req.body.totalPrice],function(err,result){
+            done();
+            if(err){
+                console.log(err);
+                resp.sent({
+                    status:"faile"
+                });
+            } else {
+                resp.send({
+                    status:"success",
+                    id:result.rows[0].order_id
+                })
+            }
+            
+            
+        });
+    });
+});
+
+app.post("/order/detailes",function(req,resp){
+    console.log(req.body)
+        pg.connect(dbURL,function(err,client,done){
+        if(err){
+            console.log(err);
+            resp.send({
+                status:"fail"
+            });
+        }
+        client.query("INSERT INTO hoth_order_details (item_name,quantity,order_id) VALUES ($1,$2,$3)",[req.body.name,req.body.quantity,req.body.id],function(err,result){
+            done();
+            
+            if(err){
+                console.log(err);
+                resp.sent({
+                    status:"fail"
+                });
+            }
+            resp.send({
+                status:"success"
+            });
+        });
+    });
+    
+})
+
+// -----------------------Order page end ------------------//
+
 app.use("/scripts", express.static("build"));
 
 app.use("/images", express.static("images"));
@@ -202,6 +305,10 @@ app.get("/user_profile", function(req, resp) {
 app.get("/checkout", function(req, resp) {
     resp.sendFile(pF + "/orders.html");
 });
+
+app.get("/orders",function(req,resp){
+    resp.sendFile(pF + "/orders.html")
+})
 
 //socket
 io.on("connection", function(socket) {
