@@ -11,6 +11,7 @@ $(document).ready(function() {
     var drinksDiv = document.getElementById("drinks_div");
     var holderDiv = document.getElementById("holder");
     var warningDiv = document.getElementById("warning");
+    var checkoutButton = document.getElementById("checkout")
     
     document.addEventListener("scroll", function() {
         warningDiv.style.display = "none";
@@ -204,6 +205,7 @@ $(document).ready(function() {
             orders[item_code] = parseInt(itemQty.value);
             
             qtyDiv.innerHTML = itemQty.value + " x ";
+            console.log(orders);
         });
         
         deleteItem.addEventListener("click", function() {
@@ -213,8 +215,11 @@ $(document).ready(function() {
             
             console.log(orders);
         });
+        
+        console.log(orders);
     }
     
+
     $.ajax({
         url:"/user-cp",
         type:"post",
@@ -231,4 +236,20 @@ $(document).ready(function() {
             }
         }
     });
+    
+    checkoutButton.addEventListener("click",function(){
+        $.ajax({
+            url:"/orders",
+            type:"post",
+            data:{
+                orders:orders
+            },
+            success:function(resp){
+                location.href = "/orders";
+        }
+        })
+    })
+    
+    
+
 });
