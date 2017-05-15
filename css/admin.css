@@ -76,3 +76,23 @@ body{
 	margin-top:10vh;
 	height:auto;
 }
+
+/* message div */
+#price-updated{
+    position: fixed;
+    width: auto;
+    right:45vw;
+    bottom: -6vh;
+    display: block;
+    background-color: azure;
+    transition: bottom 1s;
+}
+
+#picture-updated{
+    
+    width:auto;
+    text-align: center;
+    display: none;
+    
+
+}

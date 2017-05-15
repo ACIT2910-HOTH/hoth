@@ -13,6 +13,8 @@ const path = require("path");
 const port = process.env.PORT || 10000;
 const bodyParser = require("body-parser");
 const session = require("express-session");
+const formidable = require('formidable');
+
 const fs = require("fs");
 
 var app = express();
@@ -23,6 +25,7 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 var dbURL = process.env.DATABASE_URL || "postgres://postgres:Element1@localhost:5432/kitchen";
 
+
 app.use(bodyParser.urlencoded({
     extended:true
 }));
@@ -32,6 +35,8 @@ app.use(session({
     resave:true,
     saveUninitialized:true
 }));
+
+
 
 // ajax response
 app.post("/register", function(req, resp) {
@@ -129,18 +134,7 @@ app.post("/user-cp", function(req, resp) {
     });
 });
 
-app.post("/adminItems", function(req,resp){
-	console.log(req.body);
-	if(req.body.type == "create"){
-		resp.send({
-			status:"success",
-			name: req.body.name,
-			img:req.body.img,
-			desc:req.body.desc,
-			price:req.body.price		
-		});
-	}
-});
+
 
 
 app.post("/changeEmail", function(req, resp) {
@@ -234,7 +228,7 @@ app.post("/save/order",function(req,resp){
                 resp.send({
                     status:"success",
                     id:result.rows[0].order_id
-                })
+                });
             }
             
             
@@ -266,17 +260,98 @@ app.post("/order/detailes",function(req,resp){
         });
     });
     
-})
+});
 
 // -----------------------Order page end ------------------//
+// -----------------------Admin operation---------------//
+app.post("/change/price",function(req,resp){
+    pg.connect(dbURL,function(err,client,done){
+        if(err){
+            console.log(err)
+        }
+        client.query("UPDATE hoth_items SET price = $1 WHERE item_code = $2",[req.body.price,req.body.item],function(err,result){
+            done();
+            console.log(result)
+            if(err){
+                console.log(err);
+            }else {
+                resp.send({status:"success"})
+
+            }
+        });
+    });
+});
+
+app.post("/adminItems", function(req,resp){
+	console.log(req.body);
+    pg.connect(dbURL,function(err,client,done){
+        if(err){
+            console.log(err)
+        }
+        client.query("INSERT INTO hoth_items (item_code,category,description,item_name,filename,price) VALUES($1,$2,$3,$4,$5,$6)",[req.body.itemCode,req.body.category,req.body.desc,req.body.name,req.body.fileName,req.body.price],function(err,result){
+            done();
+            console.log(result)
+            if(err){
+                console.log(err);
+            }else {
+                resp.send({
+                    status:"success",
+                    name: req.body.name,
+                    item_code:req.body.itemCode,
+                    filename:req.body.fileName,
+                    desc:req.body.desc,
+                    price:req.body.price
+                });
+
+            }
+        });
+    });
+});
+
+var imageName;
+app.post("/filename",function(req,resp){
+    imageName = req.body.fileName
+})
+
+app.post('/upload', function(req, resp){
+    
+    console.log(imageName)
+  var form = new formidable.IncomingForm();
+ 
+  form.multiples = true;
+
+  form.uploadDir = path.join(__dirname, '/images');
+
+  form.on('file', function(field, file) {
+    fs.rename(file.path, path.join(form.uploadDir, imageName));
+  });
+
+  form.on('error', function(err) {
+    console.log('An error has occured: \n' + err);
+  });
+
+  form.on('end', function() {
+    resp.end('success');
+  });
+
+  form.parse(req);
+
+});
+
+
+
+//------------------------Admin operation end-----------//
 
 app.use("/scripts", express.static("build"));
+
+app.use("/js",express.static("js"))
 
 app.use("/images", express.static("images"));
 
 app.use("/css", express.static("css"));
 
 app.use("/public", express.static("public"));
+
 
 app.get("/", function(req, resp) {
     if(req.session.username == undefined){
@@ -312,6 +387,7 @@ app.get("/logout", function(req, resp) {
     resp.redirect("/");
 });
 
+
 app.get("/user_profile", function(req, resp) {
     if (req.session.auth == "C") {
         resp.sendFile(pF + "/profile.html");
@@ -325,6 +401,10 @@ app.get("/user_profile", function(req, resp) {
 app.get("/checkout", function(req, resp) {
     resp.sendFile(pF + "/orders.html");
 });
+
+app.get("/backdoor",function(req,resp){
+    resp.sendFile(pF+"/admin.html")
+})
 
 
 //socket
