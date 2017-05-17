@@ -5,11 +5,9 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
         <script src="/socket.io/socket.io.js"></script>
         <script src="/scripts/kitchenbundle.js"></script>
@@ -21,21 +19,69 @@
     </head>
     
     <body>
-        <button class="btn" id="logout">LOGOUT</button>
+        <button class="btn btn-primary" type="button" id="logout">LOGOUT</button>
         
-        <div id="order-status"></div>
-        
-        <div id="container">        
-            <label>Orders</label>
+        <div class="holder">
+            <h3>Orders</h3>
+            
+            <!--Order item that has been finished-->
+            <div id="orders">
+                <div class="container-fluid alert alert-success alert-dismissable fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Order #1</strong>
+                    <div class="items col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="i">x2 Burger</div>
+                        <div class="i">x3 Fries</div>
+                    </div>
+                </div>
+                
+                <!--Order item that has not been finished-->
+                <div class="container-fluid alert alert-danger">
+                    <strong class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Order #2</strong>
+                    <div class="items col-lg-10 col-md-10 col-sm-11 col-xs-11">
+                        <div class="i">x2 Burger <button class="btn btn-default" type="button">Bag</button></div>
+                        <div class="i">x2 Fries <button class="btn btn-default" type="button">Bag</button></div>
+                    </div>
+                    <button type="button" class="col-lg-1 col-md-1 col-sm-2 col-xs-5 btn btn-success">Fill Order</button>
+                </div>
+            </div>
         </div>
         
-        <!--<div id="hot">
-            <label>Heat Lamp</label>
+        <div class="holder_2">
+            <div id="controller">
+                <!--Once a food item is clicked on, change the item_to_make innerHTML to the name of the food item-->
+                <div id="item_up"><strong><h3>How Many <h3 id="item_to_make">X-Wings</h3> Do You Need ?</h3></strong></div>
+                <div id="button" class="btn-group">
+                    <button class="btn btn-success" id="1" type="button">Prepare 1</button>
+                    <button class="btn btn-success" id="2" type="button">Prepare 2</button>
+                    <button class="btn btn-success" id="6" type="button">Prepare 6</button>
+                </div>
+            </div>
+        
+            <div id="controller_2">
+                <div id="item_up"><strong><h3>Preparing Food, Please Wait</h3></strong></div>
+                <!--To change progress bar, change aria-valuenow and width-->
+                <div id="progress" class="progress">
+                    <div id="timeout" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                      80%
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <div id="order_num">
-            <label>Orders: 100</label>
-        </div>-->
+        <div class="holder">
+            <h3>Hot Plate</h3>
+            
+            <div id="hot_plate">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">5 X-Wings</div>
+                </div>
+                
+                <div class="panel panel-warning">
+                    <div class="panel-heading">5 X-Wings</div>
+                </div>
+            </div>
+        </div>
         
     </body>
 </html>

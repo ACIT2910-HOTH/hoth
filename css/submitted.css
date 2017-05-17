@@ -1,0 +1,45 @@
+body {
+    background-color: white;
+    margin: 0;
+    background: url(/images/Hoth_plains.jpg) no-repeat center top fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.order_number {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#order_list {
+    height: 24vh;
+    overflow-y: auto;
+}
+
+#current_orders {
+    height: 50vh;
+    overflow-y: auto;
+}
+
+h3 {
+    text-align: center;
+}
+
+.holder {
+    background-color: rgba(50,50,50,0.3);
+}
+
+.order_item {
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.num {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+}

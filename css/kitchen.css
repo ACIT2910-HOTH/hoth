@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    margin: 0;
+    margin: 20px 0;
     background-image: url(/images/login_1.jpg);
     -webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -11,86 +11,70 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-#order-status {
-    height:20px;
+.holder, .holder_2 {
+    background-color: rgba(50,50,50,0.8);
+    width: 95vw;
+    margin: 0 auto;
+    border: 2px solid black;
 }
 
-label {
-    color: black;
-    background-color: darkgray;
+.holder_2 {
+    margin: 50px auto;
+}
+
+#item_up {
+    
 }
 
 #logout {
-    margin: 0.5vh auto;
-    background-color: grey;
+    margin-bottom: 20px;
+}
+
+h3 {
     color: white;
 }
 
-#logout:hover {
-    background-color: black;
-    color: grey;
+.i:hover {
+    color: black;
 }
 
-.item {
-    background-color: grey;
-    margin-top: 0.5vh;
-}
-
-#container {
-    height: 50vh;
-    background-color: rgba(50,50,50,0.4);
-}
-
-#hot {
-    height: 40vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: rgba(10,10,80,0.4);
-}
-
-#order_num {
-    height: 3vh;
-}
-
-.order {
-    height: 100%;
+#orders, #hot_plate {
+    height: 80vh;
     overflow-y: auto;
 }
 
-.order_item {
-    height: 20px;
+.alert {
+    height: 20%;
+    overflow-y: auto;
+    width: 90%;
 }
 
-.id, .time {
-    height: 100%;
-    line-height: 7vh;
-    vertical-align: center;
+.panel {
+    width: 90%;
+    margin: 10px auto;
+}
+
+#progress {
+    margin: 50px auto;
+    width: 80vw;
+    background-color: rgba(150,150,150,0.6);
+}
+
+#controller_2 {
+    display: none;
+}
+
+#timeout {
+    background-color: darkgrey;
+    color: black;
+    width: 80%;
+}
+
+#button {
+    margin: 50px auto;
 }
 
 @media (max-width: 991px) {
-    body {
-        font-size: 30px;
-    }
-    
-    .item {
-        height: 13vh;
-    }
-    
-    .id, .time {
-        line-height: 13vh;
-    }
-
-    #container {
-        height: 87vh;
-    }
-
-    #hot {
-        height: 90vh;
-    }
-
-    #order_num {
-        height: 40px;
-    }
 }
 
 
