@@ -3,8 +3,18 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "mocha",
-    "start": "node server.js"
+        "test": "mocha",
+    "test-e2e": "nightwatch",
+    "start": "node server.js",
+   
+
+    "postinstall": "node nightwatch.conf.js",
+    "test": "./node_modules/.bin/nightwatch --env local",
+    "ie": "./node_modules/.bin/nightwatch -e ie11",
+    "sauce": "./node_modules/.bin/nightwatch -e chrome,ie11,android_s4_emulator,iphone_6_simulator",
+    "upload": "node test/e2e/upload_screenshots_to_s3.js",
+    "e2e": "npm run sauce; npm run upload",
+    "dev": "./node_modules/.bin/nodemon -w test/index.html --delay 250ms --exec 'npm run upload'"
   },
   "repository": {
     "type": "git",
@@ -28,12 +38,21 @@
     "pg": "^6.2.2",
     "socket.io": "^1.7.4",
     "webpac": "^1.0.1",
-    "webpack": "^2.5.1"
+    "webpack": "^2.5.1",
+      
+    "chromedriver": "^2.29.0",
+    "nightwatch": "^0.9.15",
+    "saucelabs": "^1.3.0",
+    "selenium-download": "^2.0.10"
   },
   "description": "**DISCLAIMER**: This website is for a BCIT ACIT-2910 Summer 2017 project course. \r A food ordering web application for the Star Wars Rebel base, on Planet Hoth.",
   "devDependencies": {
     "jshint": "^2.9.4",
-    "mocha": "^3.3.0"
+    "mocha": "^3.3.0",
+    "aws-sdk": "^2.7.13",
+    "env2": "^2.1.1",
+    "mime-types": "^2.1.13",
+    "nodemon": "^1.11.0"
   },
   "directories": {
     "test": "test"

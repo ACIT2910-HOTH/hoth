@@ -1,0 +1,472 @@
+14:11:23.229 INFO - Selenium build info: version: '3.3.0', revision: 'b526bd5'
+14:11:23.230 INFO - Launching a standalone Selenium Server
+2017-05-22 14:11:23.248:INFO::main: Logging initialized @225ms to org.seleniumhq.jetty9.util.log.StdErrLog
+14:11:23.291 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+14:11:23.291 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+14:11:23.291 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+14:11:23.291 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+14:11:23.297 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
+2017-05-22 14:11:23.335:INFO:osjs.Server:main: jetty-9.2.20.v20161216
+2017-05-22 14:11:23.361:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@685cb137{/,null,AVAILABLE}
+2017-05-22 14:11:23.454:INFO:osjs.AbstractConnector:main: Started ServerConnector@49993335{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2017-05-22 14:11:23.455:INFO:osjs.Server:main: Started @432ms
+14:11:23.455 INFO - Selenium Server is up and running
+14:11:23.785 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+14:11:23.819 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Testcase1, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]])
+14:11:23.829 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Testcase1, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]
+Starting ChromeDriver 2.29.461591 (62ebf098771772160f391d75e589dc567915b233) on port 5995
+Only local connections are allowed.
+14:11:26.305 INFO - Detected dialect: OSS
+14:11:26.335 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Testcase1, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]]
+14:11:26.349 INFO - Executing: [get: localhost:10000/signin])
+14:11:30.881 INFO - Done: [get: localhost:10000/signin]
+14:11:30.889 INFO - Executing: [find elements: By.cssSelector: body])
+14:11:30.984 INFO - Done: [find elements: By.cssSelector: body]
+14:11:30.988 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: body]])
+14:11:31.010 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: body]]
+14:11:31.015 INFO - Executing: [get title])
+14:11:31.020 INFO - Done: [get title]
+14:11:31.024 INFO - Executing: [maximise window])
+14:11:32.220 INFO - Done: [maximise window]
+14:11:33.233 INFO - Executing: [find element: By.cssSelector: input[name="email"]])
+14:11:33.267 INFO - Done: [find element: By.cssSelector: input[name="email"]]
+14:11:33.271 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[name="email"]]])
+14:11:33.292 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[name="email"]]]
+14:11:33.297 INFO - Executing: [find element: By.cssSelector: input[name="email"]])
+14:11:33.307 INFO - Done: [find element: By.cssSelector: input[name="email"]]
+14:11:33.311 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[name="email"]], [f, a, n, ., c, b, e, s, t, @, g, m, a, i, l, ., c, o, m]])
+14:11:33.406 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[name="email"]], [f, a, n, ., c, b, e, s, t, @, g, m, a, i, l, ., c, o, m]]
+14:11:34.416 INFO - Executing: [find element: By.cssSelector: input[name="password"]])
+14:11:34.465 INFO - Done: [find element: By.cssSelector: input[name="password"]]
+14:11:34.469 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[name="password"]]])
+14:11:34.491 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[name="password"]]]
+14:11:34.496 INFO - Executing: [find element: By.cssSelector: input[name="password"]])
+14:11:34.508 INFO - Done: [find element: By.cssSelector: input[name="password"]]
+14:11:34.512 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[name="password"]], [f, a, n, z, h, a, n, g]])
+14:11:34.573 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[name="password"]], [f, a, n, z, h, a, n, g]]
+14:11:35.590 INFO - Executing: [find element: By.cssSelector: input[id="subs"]])
+14:11:35.615 INFO - Done: [find element: By.cssSelector: input[id="subs"]]
+14:11:35.619 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[id="subs"]]])
+14:11:35.638 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[id="subs"]]]
+14:11:35.643 INFO - Executing: [find element: By.cssSelector: #subs])
+14:11:35.661 INFO - Done: [find element: By.cssSelector: #subs]
+14:11:35.665 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[id="subs"]]])
+14:11:35.894 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (e43557cea30c67d737b6f85d63c1909d)] -> css selector: input[id="subs"]]]
+14:11:37.026 INFO - Executing: [get title])
+14:11:37.042 INFO - Done: [get title]
+14:11:37.056 INFO - Executing: [find elements: By.cssSelector: [id="profile_link"]])
+14:11:37.112 INFO - Done: [find elements: By.cssSelector: [id="profile_link"]]
+14:11:37.123 INFO - Executing: [find elements: By.cssSelector: [id="logout_link"]])
+14:11:37.142 INFO - Done: [find elements: By.cssSelector: [id="logout_link"]]
+14:11:37.147 INFO - Executing: [delete session: f3dcaee7-0fb9-444d-9f31-8a5133fa5ce5])
+14:11:38.122 INFO - Done: [delete session: f3dcaee7-0fb9-444d-9f31-8a5133fa5ce5]
+14:11:38.205 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Testcase2, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]])
+14:11:38.206 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Testcase2, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]
+Starting ChromeDriver 2.29.461591 (62ebf098771772160f391d75e589dc567915b233) on port 41236
+Only local connections are allowed.
+14:11:40.229 INFO - Detected dialect: OSS
+14:11:40.235 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Testcase2, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]]
+14:11:40.245 INFO - Executing: [get: localhost:10000/])
+14:11:42.587 INFO - Done: [get: localhost:10000/]
+14:11:42.590 INFO - Executing: [find elements: By.cssSelector: body])
+14:11:42.660 INFO - Done: [find elements: By.cssSelector: body]
+14:11:42.663 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: body]])
+14:11:42.678 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: body]]
+14:11:42.681 INFO - Executing: [get title])
+14:11:42.686 INFO - Done: [get title]
+14:11:42.690 INFO - Executing: [maximise window])
+14:11:43.886 INFO - Done: [maximise window]
+14:11:44.891 INFO - Executing: [find element: By.cssSelector: input[id="qty-han_burger"]])
+14:11:44.910 INFO - Done: [find element: By.cssSelector: input[id="qty-han_burger"]]
+14:11:44.915 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-han_burger"]]])
+14:11:44.932 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-han_burger"]]]
+14:11:44.936 INFO - Executing: [find element: By.cssSelector: input[id=qty-han_burger]])
+14:11:44.955 INFO - Done: [find element: By.cssSelector: input[id=qty-han_burger]]
+14:11:44.959 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-han_burger"]], [1]])
+14:11:45.004 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-han_burger"]], [1]]
+14:11:46.011 INFO - Executing: [find element: By.cssSelector: #add-han_burger])
+14:11:46.060 INFO - Done: [find element: By.cssSelector: #add-han_burger]
+14:11:46.066 INFO - Executing: [click: 2 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #add-han_burger]])
+14:11:46.120 INFO - Done: [click: 2 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #add-han_burger]]
+14:11:46.225 INFO - Executing: [find element: By.cssSelector: input[id="qty-hoth_salad"]])
+14:11:46.243 INFO - Done: [find element: By.cssSelector: input[id="qty-hoth_salad"]]
+14:11:46.246 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-hoth_salad"]]])
+14:11:46.264 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-hoth_salad"]]]
+14:11:46.268 INFO - Executing: [find element: By.cssSelector: input[id=qty-hoth_salad]])
+14:11:46.288 INFO - Done: [find element: By.cssSelector: input[id=qty-hoth_salad]]
+14:11:46.291 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-hoth_salad"]], [1]])
+14:11:46.331 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-hoth_salad"]], [1]]
+14:11:47.340 INFO - Executing: [find element: By.cssSelector: #add-hoth_salad])
+14:11:47.396 INFO - Done: [find element: By.cssSelector: #add-hoth_salad]
+14:11:47.402 INFO - Executing: [click: 4 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #add-hoth_salad]])
+14:11:47.473 INFO - Done: [click: 4 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #add-hoth_salad]]
+14:11:47.578 INFO - Executing: [find element: By.cssSelector: input[id="qty-han_froyo"]])
+14:11:47.598 INFO - Done: [find element: By.cssSelector: input[id="qty-han_froyo"]]
+14:11:47.601 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-han_froyo"]]])
+14:11:47.619 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-han_froyo"]]]
+14:11:47.623 INFO - Executing: [find element: By.cssSelector: input[id=qty-han_froyo]])
+14:11:47.642 INFO - Done: [find element: By.cssSelector: input[id=qty-han_froyo]]
+14:11:47.646 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-han_froyo"]], [1]])
+14:11:47.686 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="qty-han_froyo"]], [1]]
+14:11:48.694 INFO - Executing: [find element: By.cssSelector: #add-han_froyo])
+14:11:48.744 INFO - Done: [find element: By.cssSelector: #add-han_froyo]
+14:11:48.748 INFO - Executing: [click: 6 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #add-han_froyo]])
+14:11:48.817 INFO - Done: [click: 6 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #add-han_froyo]]
+14:11:48.925 INFO - Executing: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function () {
+        document.querySelector('#cart_link').click()
+      }.apply(window, passedArgs);, []])
+14:11:49.031 INFO - Done: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function () {
+        document.querySelector('#cart_link').click()
+      }.apply(window, passedArgs);, []]
+14:11:50.052 INFO - Executing: [find elements: By.cssSelector: #cart-update-han_burger])
+14:11:50.101 INFO - Done: [find elements: By.cssSelector: #cart-update-han_burger]
+14:11:50.109 INFO - Executing: [find elements: By.cssSelector: #cart-update-hoth_salad])
+14:11:50.129 INFO - Done: [find elements: By.cssSelector: #cart-update-hoth_salad]
+14:11:50.133 INFO - Executing: [find elements: By.cssSelector: #cart-update-han_froyo])
+14:11:50.151 INFO - Done: [find elements: By.cssSelector: #cart-update-han_froyo]
+14:11:50.154 INFO - Executing: [find elements: By.cssSelector: #checkout])
+14:11:50.172 INFO - Done: [find elements: By.cssSelector: #checkout]
+14:11:50.176 INFO - Executing: [find elements: By.cssSelector: #checkout])
+14:11:50.184 INFO - Done: [find elements: By.cssSelector: #checkout]
+14:11:50.187 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #checkout]])
+14:11:50.204 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #checkout]]
+14:11:50.208 INFO - Executing: [find element: By.xpath: //*[@id="checkout"]])
+14:11:50.227 INFO - Done: [find element: By.xpath: //*[@id="checkout"]]
+14:11:50.229 INFO - Executing: [click: 10 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #checkout]])
+14:11:50.276 INFO - Done: [click: 10 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: #checkout]]
+14:11:52.288 INFO - Executing: [get title])
+14:11:52.309 INFO - Done: [get title]
+14:11:53.317 INFO - Executing: [find element: By.xpath: //*[@id="fb-ot"]])
+14:11:53.346 INFO - Done: [find element: By.xpath: //*[@id="fb-ot"]]
+14:11:53.350 INFO - Executing: [get text: 11 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> xpath: //*[@id="fb-ot"]]])
+14:11:53.372 INFO - Done: [get text: 11 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> xpath: //*[@id="fb-ot"]]]
+14:11:54.382 INFO - Executing: [find element: By.cssSelector: input[id="eat-in"]])
+14:11:54.437 INFO - Done: [find element: By.cssSelector: input[id="eat-in"]]
+14:11:54.440 INFO - Executing: [is displayed: 12 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="eat-in"]]])
+14:11:54.464 INFO - Done: [is displayed: 12 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="eat-in"]]]
+14:11:54.468 INFO - Executing: [find element: By.cssSelector: input[id=eat-in]])
+14:11:54.486 INFO - Done: [find element: By.cssSelector: input[id=eat-in]]
+14:11:54.489 INFO - Executing: [click: 12 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="eat-in"]]])
+14:11:54.543 INFO - Done: [click: 12 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="eat-in"]]]
+14:11:55.564 INFO - Executing: [find element: By.cssSelector: input[id="im-credit"]])
+14:11:55.615 INFO - Done: [find element: By.cssSelector: input[id="im-credit"]]
+14:11:55.620 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="im-credit"]]])
+14:11:55.643 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="im-credit"]]]
+14:11:55.647 INFO - Executing: [find element: By.cssSelector: input[id=im-credit]])
+14:11:55.665 INFO - Done: [find element: By.cssSelector: input[id=im-credit]]
+14:11:55.669 INFO - Executing: [click: 13 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="im-credit"]]])
+14:11:55.717 INFO - Done: [click: 13 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: input[id="im-credit"]]]
+14:11:56.727 INFO - Executing: [find element: By.cssSelector: button[id="checkout-but"]])
+14:11:56.778 INFO - Done: [find element: By.cssSelector: button[id="checkout-but"]]
+14:11:56.782 INFO - Executing: [is displayed: 14 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: button[id="checkout-but"]]])
+14:11:56.805 INFO - Done: [is displayed: 14 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: button[id="checkout-but"]]]
+14:11:56.809 INFO - Executing: [find element: By.cssSelector: button[id=checkout-but]])
+14:11:56.826 INFO - Done: [find element: By.cssSelector: button[id=checkout-but]]
+14:11:56.829 INFO - Executing: [click: 14 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: button[id="checkout-but"]]])
+14:11:56.896 INFO - Done: [click: 14 [[ChromeDriver: chrome on XP (8c399c4e9638f6f986adb5c4ad2797aa)] -> css selector: button[id="checkout-but"]]]
+14:11:57.911 INFO - Executing: [get title])
+14:11:57.930 INFO - Done: [get title]
+14:11:57.939 INFO - Executing: [delete session: 674a5100-b3fb-4814-b1b4-04876bad374b])
+14:11:58.855 INFO - Done: [delete session: 674a5100-b3fb-4814-b1b4-04876bad374b]
+14:11:58.906 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Testcase3, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]])
+14:11:58.907 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Testcase3, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]
+Starting ChromeDriver 2.29.461591 (62ebf098771772160f391d75e589dc567915b233) on port 32095
+Only local connections are allowed.
+14:12:00.857 INFO - Detected dialect: OSS
+14:12:00.860 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Testcase3, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]]
+14:12:00.870 INFO - Executing: [get: localhost:10000/])
+14:12:03.254 INFO - Done: [get: localhost:10000/]
+14:12:03.259 INFO - Executing: [find elements: By.cssSelector: body])
+14:12:03.330 INFO - Done: [find elements: By.cssSelector: body]
+14:12:03.333 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: body]])
+14:12:03.347 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: body]]
+14:12:03.350 INFO - Executing: [get title])
+14:12:03.354 INFO - Done: [get title]
+14:12:03.356 INFO - Executing: [maximise window])
+14:12:04.504 INFO - Done: [maximise window]
+14:12:05.507 INFO - Executing: [find element: By.cssSelector: input[id="qty-han_burger"]])
+14:12:05.526 INFO - Done: [find element: By.cssSelector: input[id="qty-han_burger"]]
+14:12:05.529 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-han_burger"]]])
+14:12:05.547 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-han_burger"]]]
+14:12:05.551 INFO - Executing: [find element: By.cssSelector: input[id=qty-han_burger]])
+14:12:05.570 INFO - Done: [find element: By.cssSelector: input[id=qty-han_burger]]
+14:12:05.574 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-han_burger"]], [1]])
+14:12:05.619 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-han_burger"]], [1]]
+14:12:06.626 INFO - Executing: [find element: By.cssSelector: #add-han_burger])
+14:12:06.669 INFO - Done: [find element: By.cssSelector: #add-han_burger]
+14:12:06.672 INFO - Executing: [click: 2 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #add-han_burger]])
+14:12:06.724 INFO - Done: [click: 2 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #add-han_burger]]
+14:12:06.830 INFO - Executing: [find element: By.cssSelector: input[id="qty-hoth_salad"]])
+14:12:06.878 INFO - Done: [find element: By.cssSelector: input[id="qty-hoth_salad"]]
+14:12:06.883 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-hoth_salad"]]])
+14:12:06.911 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-hoth_salad"]]]
+14:12:06.916 INFO - Executing: [find element: By.cssSelector: input[id=qty-hoth_salad]])
+14:12:06.946 INFO - Done: [find element: By.cssSelector: input[id=qty-hoth_salad]]
+14:12:06.950 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-hoth_salad"]], [1]])
+14:12:06.990 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-hoth_salad"]], [1]]
+14:12:07.994 INFO - Executing: [find element: By.cssSelector: #add-hoth_salad])
+14:12:08.012 INFO - Done: [find element: By.cssSelector: #add-hoth_salad]
+14:12:08.014 INFO - Executing: [click: 4 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #add-hoth_salad]])
+14:12:08.066 INFO - Done: [click: 4 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #add-hoth_salad]]
+14:12:08.172 INFO - Executing: [find element: By.cssSelector: input[id="qty-han_froyo"]])
+14:12:08.192 INFO - Done: [find element: By.cssSelector: input[id="qty-han_froyo"]]
+14:12:08.195 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-han_froyo"]]])
+14:12:08.214 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-han_froyo"]]]
+14:12:08.218 INFO - Executing: [find element: By.cssSelector: input[id=qty-han_froyo]])
+14:12:08.236 INFO - Done: [find element: By.cssSelector: input[id=qty-han_froyo]]
+14:12:08.239 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-han_froyo"]], [1]])
+14:12:08.279 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="qty-han_froyo"]], [1]]
+14:12:09.287 INFO - Executing: [find element: By.cssSelector: #add-han_froyo])
+14:12:09.332 INFO - Done: [find element: By.cssSelector: #add-han_froyo]
+14:12:09.337 INFO - Executing: [click: 6 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #add-han_froyo]])
+14:12:09.386 INFO - Done: [click: 6 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #add-han_froyo]]
+14:12:09.492 INFO - Executing: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function () {
+        document.querySelector('#cart_link').click()
+      }.apply(window, passedArgs);, []])
+14:12:09.603 INFO - Done: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function () {
+        document.querySelector('#cart_link').click()
+      }.apply(window, passedArgs);, []]
+14:12:10.617 INFO - Executing: [find elements: By.cssSelector: #cart-update-han_burger])
+14:12:10.668 INFO - Done: [find elements: By.cssSelector: #cart-update-han_burger]
+14:12:10.672 INFO - Executing: [find elements: By.cssSelector: #cart-update-hoth_salad])
+14:12:10.697 INFO - Done: [find elements: By.cssSelector: #cart-update-hoth_salad]
+14:12:10.702 INFO - Executing: [find elements: By.cssSelector: #cart-update-han_froyo])
+14:12:10.721 INFO - Done: [find elements: By.cssSelector: #cart-update-han_froyo]
+14:12:10.725 INFO - Executing: [find elements: By.cssSelector: #checkout])
+14:12:10.741 INFO - Done: [find elements: By.cssSelector: #checkout]
+14:12:10.744 INFO - Executing: [find element: By.cssSelector: input[id="cart-qty-han_burger"]])
+14:12:10.761 INFO - Done: [find element: By.cssSelector: input[id="cart-qty-han_burger"]]
+14:12:10.764 INFO - Executing: [is displayed: 11 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-han_burger"]]])
+14:12:10.781 INFO - Done: [is displayed: 11 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-han_burger"]]]
+14:12:10.784 INFO - Executing: [find element: By.cssSelector: input[id=cart-qty-han_burger]])
+14:12:10.800 INFO - Done: [find element: By.cssSelector: input[id=cart-qty-han_burger]]
+14:12:10.803 INFO - Executing: [send keys: 11 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-han_burger"]], [2]])
+14:12:10.840 INFO - Done: [send keys: 11 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-han_burger"]], [2]]
+14:12:11.863 INFO - Executing: [find element: By.cssSelector: #cart-update-han_burger])
+14:12:11.910 INFO - Done: [find element: By.cssSelector: #cart-update-han_burger]
+14:12:11.913 INFO - Executing: [click: 7 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #cart-update-han_burger]])
+14:12:11.966 INFO - Done: [click: 7 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #cart-update-han_burger]]
+14:12:13.081 INFO - Executing: [find element: By.cssSelector: input[id="cart-qty-hoth_salad"]])
+14:12:13.130 INFO - Done: [find element: By.cssSelector: input[id="cart-qty-hoth_salad"]]
+14:12:13.136 INFO - Executing: [is displayed: 12 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-hoth_salad"]]])
+14:12:13.162 INFO - Done: [is displayed: 12 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-hoth_salad"]]]
+14:12:13.166 INFO - Executing: [find element: By.cssSelector: input[id=cart-qty-hoth_salad]])
+14:12:13.196 INFO - Done: [find element: By.cssSelector: input[id=cart-qty-hoth_salad]]
+14:12:13.201 INFO - Executing: [send keys: 12 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-hoth_salad"]], [2]])
+14:12:13.241 INFO - Done: [send keys: 12 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-hoth_salad"]], [2]]
+14:12:14.252 INFO - Executing: [find element: By.cssSelector: #cart-update-hoth_salad])
+14:12:14.301 INFO - Done: [find element: By.cssSelector: #cart-update-hoth_salad]
+14:12:14.316 INFO - Executing: [click: 8 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #cart-update-hoth_salad]])
+14:12:14.366 INFO - Done: [click: 8 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #cart-update-hoth_salad]]
+14:12:15.482 INFO - Executing: [find element: By.cssSelector: input[id="cart-qty-han_froyo"]])
+14:12:15.532 INFO - Done: [find element: By.cssSelector: input[id="cart-qty-han_froyo"]]
+14:12:15.535 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-han_froyo"]]])
+14:12:15.560 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-han_froyo"]]]
+14:12:15.563 INFO - Executing: [find element: By.cssSelector: input[id=cart-qty-han_froyo]])
+14:12:15.583 INFO - Done: [find element: By.cssSelector: input[id=cart-qty-han_froyo]]
+14:12:15.586 INFO - Executing: [send keys: 13 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-han_froyo"]], [2]])
+14:12:15.629 INFO - Done: [send keys: 13 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="cart-qty-han_froyo"]], [2]]
+14:12:16.637 INFO - Executing: [find element: By.cssSelector: #cart-update-han_froyo])
+14:12:16.697 INFO - Done: [find element: By.cssSelector: #cart-update-han_froyo]
+14:12:16.700 INFO - Executing: [click: 9 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #cart-update-han_froyo]])
+14:12:16.756 INFO - Done: [click: 9 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #cart-update-han_froyo]]
+14:12:16.862 INFO - Executing: [find elements: By.cssSelector: #checkout])
+14:12:16.882 INFO - Done: [find elements: By.cssSelector: #checkout]
+14:12:16.889 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #checkout]])
+14:12:16.940 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #checkout]]
+14:12:16.944 INFO - Executing: [find element: By.xpath: //*[@id="checkout"]])
+14:12:16.969 INFO - Done: [find element: By.xpath: //*[@id="checkout"]]
+14:12:16.972 INFO - Executing: [click: 10 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #checkout]])
+14:12:17.023 INFO - Done: [click: 10 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: #checkout]]
+14:12:19.032 INFO - Executing: [get title])
+14:12:19.051 INFO - Done: [get title]
+14:12:20.098 INFO - Executing: [find element: By.xpath: //*[@id="fb-ot"]])
+14:12:20.139 INFO - Done: [find element: By.xpath: //*[@id="fb-ot"]]
+14:12:20.144 INFO - Executing: [get text: 14 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> xpath: //*[@id="fb-ot"]]])
+14:12:20.165 INFO - Done: [get text: 14 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> xpath: //*[@id="fb-ot"]]]
+14:12:21.179 INFO - Executing: [find element: By.cssSelector: input[id="eat-in"]])
+14:12:21.228 INFO - Done: [find element: By.cssSelector: input[id="eat-in"]]
+14:12:21.232 INFO - Executing: [is displayed: 15 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="eat-in"]]])
+14:12:21.256 INFO - Done: [is displayed: 15 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="eat-in"]]]
+14:12:21.259 INFO - Executing: [find element: By.cssSelector: input[id=eat-in]])
+14:12:21.277 INFO - Done: [find element: By.cssSelector: input[id=eat-in]]
+14:12:21.280 INFO - Executing: [click: 15 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="eat-in"]]])
+14:12:21.337 INFO - Done: [click: 15 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="eat-in"]]]
+14:12:22.360 INFO - Executing: [find element: By.cssSelector: input[id="im-credit"]])
+14:12:22.408 INFO - Done: [find element: By.cssSelector: input[id="im-credit"]]
+14:12:22.421 INFO - Executing: [is displayed: 16 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="im-credit"]]])
+14:12:22.440 INFO - Done: [is displayed: 16 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="im-credit"]]]
+14:12:22.451 INFO - Executing: [find element: By.cssSelector: input[id=im-credit]])
+14:12:22.469 INFO - Done: [find element: By.cssSelector: input[id=im-credit]]
+14:12:22.472 INFO - Executing: [click: 16 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="im-credit"]]])
+14:12:22.523 INFO - Done: [click: 16 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: input[id="im-credit"]]]
+14:12:23.535 INFO - Executing: [find element: By.cssSelector: button[id="checkout-but"]])
+14:12:23.582 INFO - Done: [find element: By.cssSelector: button[id="checkout-but"]]
+14:12:23.586 INFO - Executing: [is displayed: 17 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: button[id="checkout-but"]]])
+14:12:23.606 INFO - Done: [is displayed: 17 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: button[id="checkout-but"]]]
+14:12:23.609 INFO - Executing: [find element: By.cssSelector: button[id=checkout-but]])
+14:12:23.629 INFO - Done: [find element: By.cssSelector: button[id=checkout-but]]
+14:12:23.631 INFO - Executing: [click: 17 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: button[id="checkout-but"]]])
+14:12:23.692 INFO - Done: [click: 17 [[ChromeDriver: chrome on XP (56f16233369301e51336518439d36f3a)] -> css selector: button[id="checkout-but"]]]
+14:12:24.710 INFO - Executing: [get title])
+14:12:24.729 INFO - Done: [get title]
+14:12:24.735 INFO - Executing: [delete session: d85043ab-eb37-4ebb-a4ec-282c28e5eefc])
+14:12:25.622 INFO - Done: [delete session: d85043ab-eb37-4ebb-a4ec-282c28e5eefc]
+14:12:25.652 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Testcase4, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]])
+14:12:25.656 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Testcase4, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]
+Starting ChromeDriver 2.29.461591 (62ebf098771772160f391d75e589dc567915b233) on port 47303
+Only local connections are allowed.
+14:12:27.662 INFO - Detected dialect: OSS
+14:12:27.667 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Testcase4, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]]
+14:12:27.675 INFO - Executing: [get: localhost:10000/])
+14:12:30.055 INFO - Done: [get: localhost:10000/]
+14:12:30.058 INFO - Executing: [find elements: By.cssSelector: body])
+14:12:30.126 INFO - Done: [find elements: By.cssSelector: body]
+14:12:30.128 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: body]])
+14:12:30.144 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: body]]
+14:12:30.147 INFO - Executing: [get title])
+14:12:30.153 INFO - Done: [get title]
+14:12:30.155 INFO - Executing: [maximise window])
+14:12:31.297 INFO - Done: [maximise window]
+14:12:32.302 INFO - Executing: [find element: By.cssSelector: input[id="qty-han_burger"]])
+14:12:32.320 INFO - Done: [find element: By.cssSelector: input[id="qty-han_burger"]]
+14:12:32.323 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-han_burger"]]])
+14:12:32.358 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-han_burger"]]]
+14:12:32.362 INFO - Executing: [find element: By.cssSelector: input[id=qty-han_burger]])
+14:12:32.387 INFO - Done: [find element: By.cssSelector: input[id=qty-han_burger]]
+14:12:32.391 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-han_burger"]], [1]])
+14:12:32.435 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-han_burger"]], [1]]
+14:12:33.441 INFO - Executing: [find element: By.cssSelector: #add-han_burger])
+14:12:33.495 INFO - Done: [find element: By.cssSelector: #add-han_burger]
+14:12:33.498 INFO - Executing: [click: 2 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #add-han_burger]])
+14:12:33.557 INFO - Done: [click: 2 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #add-han_burger]]
+14:12:33.662 INFO - Executing: [find element: By.cssSelector: input[id="qty-hoth_salad"]])
+14:12:33.703 INFO - Done: [find element: By.cssSelector: input[id="qty-hoth_salad"]]
+14:12:33.705 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-hoth_salad"]]])
+14:12:33.724 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-hoth_salad"]]]
+14:12:33.727 INFO - Executing: [find element: By.cssSelector: input[id=qty-hoth_salad]])
+14:12:33.747 INFO - Done: [find element: By.cssSelector: input[id=qty-hoth_salad]]
+14:12:33.750 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-hoth_salad"]], [1]])
+14:12:33.790 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-hoth_salad"]], [1]]
+14:12:34.795 INFO - Executing: [find element: By.cssSelector: #add-hoth_salad])
+14:12:34.846 INFO - Done: [find element: By.cssSelector: #add-hoth_salad]
+14:12:34.850 INFO - Executing: [click: 4 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #add-hoth_salad]])
+14:12:34.940 INFO - Done: [click: 4 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #add-hoth_salad]]
+14:12:35.047 INFO - Executing: [find element: By.cssSelector: input[id="qty-han_froyo"]])
+14:12:35.097 INFO - Done: [find element: By.cssSelector: input[id="qty-han_froyo"]]
+14:12:35.101 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-han_froyo"]]])
+14:12:35.123 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-han_froyo"]]]
+14:12:35.127 INFO - Executing: [find element: By.cssSelector: input[id=qty-han_froyo]])
+14:12:35.144 INFO - Done: [find element: By.cssSelector: input[id=qty-han_froyo]]
+14:12:35.146 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-han_froyo"]], [1]])
+14:12:35.183 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="qty-han_froyo"]], [1]]
+14:12:36.187 INFO - Executing: [find element: By.cssSelector: #add-han_froyo])
+14:12:36.207 INFO - Done: [find element: By.cssSelector: #add-han_froyo]
+14:12:36.209 INFO - Executing: [click: 6 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #add-han_froyo]])
+14:12:36.256 INFO - Done: [click: 6 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #add-han_froyo]]
+14:12:36.359 INFO - Executing: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function () {
+        document.querySelector('#cart_link').click()
+      }.apply(window, passedArgs);, []])
+14:12:36.425 INFO - Done: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function () {
+        document.querySelector('#cart_link').click()
+      }.apply(window, passedArgs);, []]
+14:12:37.430 INFO - Executing: [find elements: By.cssSelector: #cart-update-han_burger])
+14:12:37.465 INFO - Done: [find elements: By.cssSelector: #cart-update-han_burger]
+14:12:37.470 INFO - Executing: [find elements: By.cssSelector: #cart-update-hoth_salad])
+14:12:37.504 INFO - Done: [find elements: By.cssSelector: #cart-update-hoth_salad]
+14:12:37.510 INFO - Executing: [find elements: By.cssSelector: #cart-update-han_froyo])
+14:12:37.532 INFO - Done: [find elements: By.cssSelector: #cart-update-han_froyo]
+14:12:37.535 INFO - Executing: [find elements: By.cssSelector: #checkout])
+14:12:37.553 INFO - Done: [find elements: By.cssSelector: #checkout]
+14:12:37.557 INFO - Executing: [find element: By.cssSelector: input[id="cart-qty-han_burger"]])
+14:12:37.578 INFO - Done: [find element: By.cssSelector: input[id="cart-qty-han_burger"]]
+14:12:37.580 INFO - Executing: [is displayed: 11 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-han_burger"]]])
+14:12:37.597 INFO - Done: [is displayed: 11 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-han_burger"]]]
+14:12:37.599 INFO - Executing: [find element: By.cssSelector: input[id=cart-qty-han_burger]])
+14:12:37.616 INFO - Done: [find element: By.cssSelector: input[id=cart-qty-han_burger]]
+14:12:37.618 INFO - Executing: [send keys: 11 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-han_burger"]], [5]])
+14:12:37.657 INFO - Done: [send keys: 11 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-han_burger"]], [5]]
+14:12:38.665 INFO - Executing: [find element: By.cssSelector: #cart-update-han_burger])
+14:12:38.715 INFO - Done: [find element: By.cssSelector: #cart-update-han_burger]
+14:12:38.717 INFO - Executing: [click: 7 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #cart-update-han_burger]])
+14:12:38.770 INFO - Done: [click: 7 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #cart-update-han_burger]]
+14:12:39.883 INFO - Executing: [find element: By.cssSelector: input[id="cart-qty-hoth_salad"]])
+14:12:39.928 INFO - Done: [find element: By.cssSelector: input[id="cart-qty-hoth_salad"]]
+14:12:39.931 INFO - Executing: [is displayed: 12 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-hoth_salad"]]])
+14:12:39.952 INFO - Done: [is displayed: 12 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-hoth_salad"]]]
+14:12:39.956 INFO - Executing: [find element: By.cssSelector: input[id=cart-qty-hoth_salad]])
+14:12:39.976 INFO - Done: [find element: By.cssSelector: input[id=cart-qty-hoth_salad]]
+14:12:39.981 INFO - Executing: [send keys: 12 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-hoth_salad"]], [5]])
+14:12:40.020 INFO - Done: [send keys: 12 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-hoth_salad"]], [5]]
+14:12:41.041 INFO - Executing: [find element: By.cssSelector: #cart-update-hoth_salad])
+14:12:41.090 INFO - Done: [find element: By.cssSelector: #cart-update-hoth_salad]
+14:12:41.093 INFO - Executing: [click: 8 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #cart-update-hoth_salad]])
+14:12:41.148 INFO - Done: [click: 8 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #cart-update-hoth_salad]]
+14:12:42.270 INFO - Executing: [find element: By.cssSelector: input[id="cart-qty-han_froyo"]])
+14:12:42.301 INFO - Done: [find element: By.cssSelector: input[id="cart-qty-han_froyo"]]
+14:12:42.304 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-han_froyo"]]])
+14:12:42.325 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-han_froyo"]]]
+14:12:42.328 INFO - Executing: [find element: By.cssSelector: input[id=cart-qty-han_froyo]])
+14:12:42.348 INFO - Done: [find element: By.cssSelector: input[id=cart-qty-han_froyo]]
+14:12:42.351 INFO - Executing: [send keys: 13 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-han_froyo"]], [5]])
+14:12:42.391 INFO - Done: [send keys: 13 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="cart-qty-han_froyo"]], [5]]
+14:12:43.402 INFO - Executing: [find element: By.cssSelector: #cart-update-han_froyo])
+14:12:43.456 INFO - Done: [find element: By.cssSelector: #cart-update-han_froyo]
+14:12:43.459 INFO - Executing: [click: 9 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #cart-update-han_froyo]])
+14:12:43.523 INFO - Done: [click: 9 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #cart-update-han_froyo]]
+14:12:43.636 INFO - Executing: [find elements: By.cssSelector: #checkout])
+14:12:43.659 INFO - Done: [find elements: By.cssSelector: #checkout]
+14:12:43.663 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #checkout]])
+14:12:43.698 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #checkout]]
+14:12:43.701 INFO - Executing: [find element: By.xpath: //*[@id="checkout"]])
+14:12:43.726 INFO - Done: [find element: By.xpath: //*[@id="checkout"]]
+14:12:43.729 INFO - Executing: [click: 10 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #checkout]])
+14:12:43.781 INFO - Done: [click: 10 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: #checkout]]
+14:12:45.788 INFO - Executing: [get title])
+14:12:45.807 INFO - Done: [get title]
+14:12:46.821 INFO - Executing: [find element: By.xpath: //*[@id="fb-ot"]])
+14:12:46.866 INFO - Done: [find element: By.xpath: //*[@id="fb-ot"]]
+14:12:46.869 INFO - Executing: [get text: 14 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> xpath: //*[@id="fb-ot"]]])
+14:12:46.890 INFO - Done: [get text: 14 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> xpath: //*[@id="fb-ot"]]]
+14:12:47.902 INFO - Executing: [find element: By.cssSelector: input[id="eat-in"]])
+14:12:47.957 INFO - Done: [find element: By.cssSelector: input[id="eat-in"]]
+14:12:47.961 INFO - Executing: [is displayed: 15 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="eat-in"]]])
+14:12:47.984 INFO - Done: [is displayed: 15 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="eat-in"]]]
+14:12:47.987 INFO - Executing: [find element: By.cssSelector: input[id=eat-in]])
+14:12:48.003 INFO - Done: [find element: By.cssSelector: input[id=eat-in]]
+14:12:48.005 INFO - Executing: [click: 15 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="eat-in"]]])
+14:12:48.059 INFO - Done: [click: 15 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="eat-in"]]]
+14:12:49.063 INFO - Executing: [find element: By.cssSelector: input[id="im-credit"]])
+14:12:49.081 INFO - Done: [find element: By.cssSelector: input[id="im-credit"]]
+14:12:49.084 INFO - Executing: [is displayed: 16 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="im-credit"]]])
+14:12:49.101 INFO - Done: [is displayed: 16 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="im-credit"]]]
+14:12:49.105 INFO - Executing: [find element: By.cssSelector: input[id=im-credit]])
+14:12:49.125 INFO - Done: [find element: By.cssSelector: input[id=im-credit]]
+14:12:49.127 INFO - Executing: [click: 16 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="im-credit"]]])
+14:12:49.177 INFO - Done: [click: 16 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: input[id="im-credit"]]]
+14:12:50.189 INFO - Executing: [find element: By.cssSelector: button[id="cancel-but"]])
+14:12:50.239 INFO - Done: [find element: By.cssSelector: button[id="cancel-but"]]
+14:12:50.241 INFO - Executing: [is displayed: 17 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: button[id="cancel-but"]]])
+14:12:50.266 INFO - Done: [is displayed: 17 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: button[id="cancel-but"]]]
+14:12:50.270 INFO - Executing: [find element: By.cssSelector: button[id=cancel-but]])
+14:12:50.295 INFO - Done: [find element: By.cssSelector: button[id=cancel-but]]
+14:12:50.297 INFO - Executing: [click: 17 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: button[id="cancel-but"]]])
+14:12:50.435 INFO - Done: [click: 17 [[ChromeDriver: chrome on XP (afea7d4545424269550efdd6fa16a536)] -> css selector: button[id="cancel-but"]]]
+14:12:51.439 INFO - Executing: [get title])
+14:12:51.447 INFO - Done: [get title]
+14:12:51.451 INFO - Executing: [delete session: c542b45c-0367-4de3-8df8-c25a4ae1dcce])
+14:12:52.334 INFO - Done: [delete session: c542b45c-0367-4de3-8df8-c25a4ae1dcce]
