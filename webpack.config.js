@@ -12,7 +12,8 @@ var config = {
         "navbar":jsFolder + "/navbar.js",
         "orders":jsFolder + "/orders.js",
         "kitchen":jsFolder + "/kitchen.js",
-        "submitted":jsFolder + "/submitted.js"
+        "submitted":jsFolder + "/submitted.js",
+		"admin_user":jsFolder+"/admin_user.js"
 
     },
     output:{

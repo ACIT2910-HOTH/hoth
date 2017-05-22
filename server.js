@@ -24,7 +24,7 @@ var imgFolder = path.resolve(__dirname, "images");
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 
-var dbURL = process.env.DATABASE_URL || "postgres://postgres:rebelhanger@localhost:5432/kitchen";
+var dbURL = process.env.DATABASE_URL || "postgres://postgres:Element1@localhost:5432/kitchen";
 
 var usernameRegex = /[a-zA-Z0-9\-_]{4,20}/;
 var nameRegex = /^[a-zA-Z]{1,15}$/;
@@ -41,6 +41,19 @@ app.use(session({
     saveUninitialized:true
 }));
 
+//----------------Constraints------------------------//
+
+
+var maxOrderNumber = 10;
+var maxItemNumber = 10;
+var maxQuantity = 6;
+var cookDelay = 5000;
+var tossFood = 1200000;
+var shopStatus = 1;
+
+
+
+//----------------Constraints Ends-------------------//
 
 
 // ajax response
@@ -177,8 +190,16 @@ app.post("/orders",function(req,resp){
     while(orders.length > 0){
         orders.pop();
     }
-    orders.push(req.body.orders)
-    resp.send({status:"success"})
+    if(shopStatus == 0){
+        resp.send({
+            status:"faile",
+            message:"Sorry we are closed, please come back later"
+        })
+    } else{
+        orders.push(req.body.orders)
+        resp.send({status:"success"})
+    }
+    
     
 });
 
@@ -219,6 +240,7 @@ app.post("/get/price",function(req,resp){
          });
 
 app.post("/save/order",function(req,resp){
+    console.log(req.body)
     pg.connect(dbURL,function(err,client,done){
         if(err){
             console.log(err);
@@ -226,7 +248,7 @@ app.post("/save/order",function(req,resp){
                 status:"fail",
                 message:"database connection err"});
         }
-        client.query("INSERT INTO hoth_orders (customer,total_price) VALUES ($1,$2) RETURNING order_id",[req.session.username,req.body.totalPrice],function(err,result){
+        client.query("INSERT INTO hoth_orders (customer,total_price) VALUES ($1,$2) RETURNING order_id",[req.session.username,req.body.totalPirce],function(err,result){
             done();
             if(err){
                 console.log(err);
@@ -399,6 +421,123 @@ app.post("/get/items", function(req, resp) {
     });
 });
 
+var imageName;
+app.post("/filename",function(req,resp){
+    imageName = req.body.fileName
+})
+
+app.post('/upload', function(req, resp){
+  var form = new formidable.IncomingForm();
+ 
+  form.multiples = true;
+
+  form.uploadDir = path.join(__dirname, '/images');
+
+  form.on('file', function(field, file) {
+    fs.rename(file.path, path.join(form.uploadDir, imageName));
+  });
+
+  form.on('error', function(err) {
+    console.log('An error has occured: \n' + err);
+  });
+
+  form.on('end', function() {
+    resp.end('success');
+  });
+
+  form.parse(req);
+
+});
+
+app.post('/get/shopstatus',function(req,resp){
+    resp.send({shopStatus:shopStatus});
+});
+
+app.post("/open/close",function(req,resp){
+    shopStatus = req.body.shopStatus;
+    resp.send({status:"success"})
+    
+});
+
+app.post("/get/accounts",function(req,resp){
+    pg.connect(dbURL,function(err,client,done){
+        client.query("SELECT user_id,username, email, first_name, last_name FROM hoth_users WHERE auth_level = $1",[req.body.id],function(err,result){
+            done();
+            if(err){
+                console.log(err)
+            } else {
+                resp.send(result.rows)
+            }
+        })
+    })
+});
+
+app.post("/auth",function(req,resp){
+    pg.connect(dbURL,function(err,client,done){
+        client.query("UPDATE hoth_users SET auth_level = $1 WHERE user_id = $2",[req.body.auth,req.body.user],function(err,result){
+            done();
+            if(err){
+                console.log(err)
+            } else {
+                resp.send("success")
+            }
+            
+        })
+    })
+    
+});
+
+app.post("/order/summary",function(req,resp){
+    var totalOrderNum;
+    var totalIncome;
+   
+    pg.connect(dbURL,function(err,client,done){
+         
+        client.query("SELECT SUM(total_price) totalPrice, COUNT(order_id) ordernumber FROM hoth_orders WHERE STATUS = 'F';",function(err,result){
+            done();
+            if(err){
+                console.log(err)
+            }
+            
+            totalIncome = result.rows[0].totalprice;
+            totalOrderNum = result.rows[0].ordernumber;
+        })
+        
+        client.query("SELECT * FROM hoth_orders WHERE status = 'F';",function(err,result){
+            done();
+            if(err){
+                console.log(err)
+            } else {
+                resp.send({
+                totalIncome: totalIncome,
+                orderNumber:totalOrderNum,
+                rows:result.rows
+            })
+            }
+            
+            
+        })
+    })
+})
+
+app.post("/discard",function(req,resp){
+	pg.connect(dbURL,function(err,client,done){
+        client.query("SELECT item_name,SUM(quantity) numbers FROM hoth_prepared WHERE discarded = 'Y' GROUP BY item_name;",function(err,result){
+            done();
+            if(err){
+                console.log(err)
+            } else {
+                resp.send(result.rows)
+            }
+            
+        })
+    })
+	
+})
+
+//------------------------Admin operation end-----------//
+
+
 app.post("/prepare/item", function(req, resp) {
     pg.connect(dbURL, function(err, client, done) {
         client.query("INSERT INTO hoth_prepared (item_name, quantity, item_code) VALUES ($1, $2, $3) RETURNING *", [req.body.item, req.body.quantity, req.body.item_id], function(err, result) {
@@ -494,37 +633,13 @@ app.post("/complete/order", function(req, resp) {
     });
 });
 
-var imageName;
-app.post("/filename",function(req,resp){
-    imageName = req.body.fileName
-})
-
-app.post('/upload', function(req, resp){
-  var form = new formidable.IncomingForm();
- 
-  form.multiples = true;
-
-  form.uploadDir = path.join(__dirname, '/images');
-
-  form.on('file', function(field, file) {
-    fs.rename(file.path, path.join(form.uploadDir, imageName));
-  });
-
-  form.on('error', function(err) {
-    console.log('An error has occured: \n' + err);
-  });
-
-  form.on('end', function() {
-    resp.end('success');
-  });
-
-  form.parse(req);
-
-});
 
 
 
-//------------------------Admin operation end-----------//
+
+
+
+
 
 app.use("/scripts", express.static("build"));
 
@@ -578,7 +693,7 @@ app.get("/user_profile", function(req, resp) {
     } else if (req.session.auth == "A"){
 		resp.sendFile(pF + "/admin.html");
 	} else {
-        resp.sendFile("/");
+        resp.redirect("/");
     }
 });
 
@@ -586,11 +701,20 @@ app.get("/checkout", function(req, resp) {
     resp.sendFile(pF + "/orders.html");
 });
 
+
 app.get("/order/submitted/:orderid", function(req, resp) {
     req.session.orderid = req.params.orderid;
     
     resp.sendFile(pF + "/submitted.html");
 });
+
+app.get("/adminuser",function(req,resp){
+    if(req.session.auth == "A"){
+        resp.sendFile(pF+"/admin_user.html");
+    } else{
+        resp.sendFile("/");
+    }
+})
 
 
 //socket

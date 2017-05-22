@@ -63,11 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10327,10 +10328,8 @@ return jQuery;
 
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */
+
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(document).ready(function() {    
@@ -10346,7 +10345,8 @@ return jQuery;
     var drinksDiv = document.getElementById("drinks_div");
     var holderDiv = document.getElementById("holder");
     var warningDiv = document.getElementById("warning");
-    var checkoutButton = document.getElementById("checkout")
+    var checkoutButton = document.getElementById("checkout");
+    var shopStatusDiv = document.getElementById("closed")
     
     document.addEventListener("scroll", function() {
         warningDiv.style.display = "none";
@@ -10359,6 +10359,20 @@ return jQuery;
     
     var orders = {};
     var total_price = 0;
+    
+    
+    $.ajax({
+        url:"/get/shopstatus",
+        type:"post",
+        success:function(resp){
+            
+            if(resp.shopStatus == 0){
+                shopStatusDiv.style.display = "block"
+            } else{
+                shopStatusDiv.style.display = "none"
+            }
+        }
+    });
 
     $.ajax({
         url:"/meals",
@@ -10588,7 +10602,11 @@ return jQuery;
                 orders:orders
             },
             success:function(resp){
-                location.href = "/checkout";
+                if(resp.status == "success"){
+                    location.href = "/checkout";
+                } else {
+                    alert(resp.message)
+                }
             }
         });
     });
@@ -10599,4 +10617,5 @@ return jQuery;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })
-/******/ ]);
+
+/******/ });

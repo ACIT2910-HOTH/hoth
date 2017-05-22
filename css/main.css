@@ -11,6 +11,12 @@ body {
 }
 
 
+#closed{
+    display: none;
+    font-size: 400%;
+    color: red;
+}
+
 #appetizers_holder, #desserts_holder, #drinks_holder, #meals_holder, #about {
     padding-top: 100px;
 }

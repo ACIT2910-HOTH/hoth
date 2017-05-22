@@ -11,7 +11,8 @@ $(document).ready(function() {
     var drinksDiv = document.getElementById("drinks_div");
     var holderDiv = document.getElementById("holder");
     var warningDiv = document.getElementById("warning");
-    var checkoutButton = document.getElementById("checkout")
+    var checkoutButton = document.getElementById("checkout");
+    var shopStatusDiv = document.getElementById("closed")
     
     document.addEventListener("scroll", function() {
         warningDiv.style.display = "none";
@@ -24,6 +25,20 @@ $(document).ready(function() {
     
     var orders = {};
     var total_price = 0;
+    
+    
+    $.ajax({
+        url:"/get/shopstatus",
+        type:"post",
+        success:function(resp){
+            
+            if(resp.shopStatus == 0){
+                shopStatusDiv.style.display = "block"
+            } else{
+                shopStatusDiv.style.display = "none"
+            }
+        }
+    });
 
     $.ajax({
         url:"/meals",
@@ -253,7 +268,11 @@ $(document).ready(function() {
                 orders:orders
             },
             success:function(resp){
-                location.href = "/checkout";
+                if(resp.status == "success"){
+                    location.href = "/checkout";
+                } else {
+                    alert(resp.message)
+                }
             }
         });
     });
