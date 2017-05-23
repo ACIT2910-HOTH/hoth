@@ -10471,12 +10471,15 @@ return jQuery;
                     if (resp.status == "fail") {
                         alert("You don't have enough");
                     } else if (resp.status == "success") {
+						console.log(resp.item_code)
+						console.log(resp.prep_id)
                         var qtyDiv = document.getElementById("qty-" + resp.item_code + "-" + resp.prep_id);
                         var itemDiv = document.getElementById("item-" + resp.item_code + "-" + resp.prep_id);
 
                         if (resp.quantity > 0) {
                             qtyDiv.innerHTML = "Quantity: " + resp.quantity;
                         } else {
+							console.log("here")
                             itemDiv.parentNode.removeChild(itemDiv);
                         }
 
@@ -10535,7 +10538,8 @@ return jQuery;
                             }
                         })
                     }
-                }
+                },
+				async: true
             });
         });
     }
@@ -10578,6 +10582,7 @@ return jQuery;
                 quantity: qty
             },
             success:function(resp) {
+				console.log(resp.item_code)
                 controllerDiv.style.display = "none";
                 loadingDiv.style.display = "inline";
 
