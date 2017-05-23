@@ -15,10 +15,6 @@ $(document).ready(function() {
 	var loginDiv = document.getElementById("login");
 	var logoutDiv = document.getElementById("logout");
 	var profileDiv = document.getElementById("profile_link");
-	
-    $.get("/public/navbar.html", function(data){
-        $("#nav").replaceWith(data);
-    });
     
 	//initial
 	/*profileDiv.style.display = "none";

@@ -20,8 +20,6 @@ $(document).ready(function(){
     var totalPrice = 0;
     var tax;
     var socket = io();
-    
-    $('#foot').load('/public/footer.html');
 
 	//to round to 2 dec places
 	function round2Fixed(value) {

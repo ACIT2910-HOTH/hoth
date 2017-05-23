@@ -21,10 +21,6 @@ $(document).ready(function(){
     var fileNameSplit;
     var fileName;
     
-    $(document).ready(function(){
-       $('#foot').load('/public/footer.html');
-   });
-    
     $.ajax({
         url:"/meals",
         type:"post",
