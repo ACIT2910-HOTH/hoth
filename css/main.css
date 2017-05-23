@@ -211,12 +211,9 @@ h2 {
 
 /*XS screen size*/
 @media (max-width: 600px) {
-    #appetizers_holder, #desserts_holder, #drinks_holder, #meals_holder, #about {
-        padding: 100px 100px;
-    }
-    
     .panel {
         width: 250px;
+        margin: 0 auto;
     }
     
     #about-right {
