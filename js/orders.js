@@ -91,7 +91,6 @@ $(document).ready(function(){
                     item:orderItem
                 },
                 success:function(resp){
-                    console.log(resp);
                     itemName.push(resp.name);
                     itemPrice.push(parseFloat(resp.price));
                 },
@@ -109,7 +108,6 @@ $(document).ready(function(){
                 totalPrice:totalPrice + tax
             },
             success:function(resp){
-				console.log(orderId)
                 var orderId = resp.id;
 
                 socket.emit("send order", orderId);
@@ -126,15 +124,17 @@ $(document).ready(function(){
                         },
                         success:function(res){
                             if (res.status == "success") {
+
                                 location.href = "/order/submitted/" + orderId;
                             }
                         }
                     });
                 }
             },
-        async: false
+            async: false
         });
     });
+    
     
     cancelButton.addEventListener("click",function(){
         location.href = "/"

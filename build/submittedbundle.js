@@ -10347,7 +10347,6 @@ return jQuery;
             
             orderNum.innerHTML = resp["0"].order_id;
             oid = resp["0"].order_id;
-            console.log(oid);
             
             for (key in resp) {
                 for (items in resp[key].items) {
@@ -10455,12 +10454,10 @@ return jQuery;
             confirmDiv.innerHTML = "Your order is complete!";
 
             var timer = setInterval(dismiss, 1000);
-            console.log(timer);
         } else {
             confirmDiv.innerHTML = "Completed";
 
             var timer = setInterval(dismiss, 1000);
-            console.log(timer);
         }
     });
 
