@@ -301,7 +301,6 @@ app.post("/submit/order", function(req, resp) {
     //pg.connect(dbURL, function(err, client, done) {
         if (req.session.orderid == req.session.user_order_id) {
             client.query("SELECT * FROM hoth_order_details INNER JOIN hoth_items ON hoth_order_details.item_name = hoth_items.item_name WHERE hoth_order_details.order_id = $1", [req.session.orderid], function(err, result) {
-                //done();
 
                 if (err) {
                     console.log(err);
