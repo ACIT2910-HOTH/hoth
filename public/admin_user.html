@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <script src="/scripts/admin_userbundle.js"></script>
+        
+        <link rel="stylesheet" href="/css/admin_user.css"/>
+        <link rel="stylesheet" href="/css/scrollbar.css"/>
+        <link rel="stylesheet" href="/css/navigation.css"/>
+        <link rel="icon" type="image/png" href="/images/Rebel-50.png"/>
+    </head>
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav id="navigation" class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="/" id="logo" class="navbar-brand"></a>
+                    <a href="/" id="title" class="navbar-brand">Rebel Hangar</a>
+                    
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+						<li><a id="meal_link" href="/#meals">Meals</a></li>
+                        <li><a id="appetizer_link" href="/#appetizers">Appetizers</a></li>
+						<li><a id="drink_link" href="/#drinks">Drinks</a></li>
+                        <li><a id="dessert_link" href="/#desserts">Desserts</a></li>
+						<li><a id="admin_page" href="/admin_page">Admin</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="logout"><a href="/logout" class="reg">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div id = "menu">
+            <p id = 'shop_status'> Open/Close Shop:</p>
+            <div>
+            <label class="switch">
+            <input id = 'switch' type="checkbox" >
+            <div class="slider"></div>
+            </label>
+            </div>
+          
+            <button id = "show_customer_accounts" class="button btn-default">Show Customer Accounts</button>
+            <button id = "show_employee_accounts" class="button btn-default">Show Employee Accounts</button>
+            <button id = "show_admin_accounts" class="button btn-default">Show Administrator Accounts</button>
+            <!--<button id = "show_summary" class="button">Summary</button>-->
+            <button id = "show_discard_food" class="button btn-default">Generate Discard Report</button>
+            <button id="gen_order_report" class="button btn-default">Generate Order Report</button>
+            <button id="gen_item_report" class="button btn-default">Generate Item Report</button>
+            
+        </div>
+        
+        <div id = "container">
+            <div id="table-div">
+                <table id ="table" class = "table">
+                </table>
+            </div>
+            
+            <div id="order-report-div">
+                <h3>Orders Report</h3>
+
+                <div id="order-summary">
+                </div>
+            </div>   
+
+            <div id="item-report-div">
+                <h3>Item Report</h3>
+            </div> 
+
+            <div id="discarded-report-div">
+                <h3>Discarded Item Report</h3>
+            </div>
+        </div>
+    </body>
+</html>

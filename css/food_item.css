@@ -1,0 +1,80 @@
+.inside {
+    text-align: center;
+    width:22%;
+    height:300px;
+    display:inline-block;
+    margin:10px 10px 10px 10px;
+}
+
+.cat_div {
+    width:100%;
+}
+
+.pic {
+    background-image: url(/images/Rebel-50.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 20vh;
+}
+
+.desc {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+#meals_div, #appetizers_div, #desserts_div, #drinks_div {
+    display:none;
+    width:100%;
+}
+
+.form {
+    text-align: center;
+}
+
+.qty {
+    background-color: #2F8DB3;
+    border: 1px solid #2F8DB3;
+    margin: 0 15px;
+    color: #FFFFFF;
+}
+
+.qty:hover {
+    background-color: #2257BF;
+    border: 1px solid #2257BF;
+}
+
+.item-control-input {
+    margin:5px;
+}
+
+.add {
+    background-color: #333333;
+    border: 1px solid #333333;
+    color: #FDF8FF;
+    margin: auto;
+}
+
+.add:hover {
+    background-color: black;
+    border: 1px solid black;
+}
+
+#warning {
+    border:1px solid black;
+    text-align:center;
+    padding:15px;
+    position:absolute;
+    background-color:rgb(0,200,255);
+    display:none;
+    z-index: 2;
+}
+
+#warning-container {
+    position:relative;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    pointer-events:none;
+}

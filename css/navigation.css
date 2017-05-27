@@ -1,0 +1,70 @@
+/*Fan_change_log
+1. color theme change
+2. button hover behavior change
+3. nav-bar style
+*/
+
+#navigation {
+    /*background-color: #0ABAB5;*/
+    /*Fan_start------------------------------------------------*/
+    background-color: #24292e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /*Fan_end------------------------------------------------*/
+}
+
+#title {
+    /*
+    color: #DD1D22;*/
+    /*Fan_start------------------------------------------------*/
+    font-weight: normal;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /*Fan_end------------------------------------------------*/
+}
+
+#logo {
+    width: 5vw;
+    background-image: url(/images/Rebel-51.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: width 2s, height 2s, transform 5s;
+}
+
+#logo:hover {
+    transform: rotateY(360deg);
+}
+
+/*Fan_start------------------------------------------------*/
+.nav {
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#myNavbar li a{
+    padding-top: 10px;
+    text-shadow: none;
+    color: grey;
+}
+
+.navbar .active a {
+    color: #fff !important;
+}
+
+.icon-bar {
+    background-color: white;
+}
+
+#profile_link, #logout_link {
+    display:none;
+}
+
+/*Fan - fix color scheme and behavior for nav bar*/
+#appetizer_link:hover, #dessert_link:hover, #drink_link:hover, #meal_link:hover, #about_link:hover, #login:hover, #logout_link:hover, #profile_link:hover, #logout:hover {
+    text-decoration: none;
+    background-color: #24292e;
+    color: #fff;
+}
+
+/*Fan_end------------------------------------------------*/

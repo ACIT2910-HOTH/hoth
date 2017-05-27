@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+	background-image: url(/images/Hoth_plains.jpg);
+}
+
+table {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 100%;
+	font-size:1.5em;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+	background-color: dimgray;
+    color: white;
+    border: 2px solid #dddddd;
+    text-align: left;
+	padding-bottom: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: ghostwhite;
+}
+
+#order-display{
+	padding-left:3vw;
+	padding-right:3vw;
+	background-color:rgba(240,240,250,0.6);
+	border: 2px solid #333333;
+    overflow-y: auto;
+}
+
+#cart-total-div{
+	background-color:rgba(240,240,250,0.6);
+	border: 2px solid #333333;
+    overflow-y: auto;
+}
+
+#order-cust-info{
+    overflow: auto;
+}
+
+#order-submit-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#order-cancel-btn{
+    border-radius: 6vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#order-submit-btn{
+    border-radius: 6vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul{
+	font-size:1em;
+	list-style-type:none;
+	margin: 0; 
+	padding: 0;
+}
+
+li{
+	margin-left:1vw; 
+	padding: 0;
+	
+}
+
+hr.style2 {
+	border-top: 4px double #8c8b8b;
+}
+
+#cancel-but{
+	font-size:2em;
+	margin-left:1vw;
+	margin-top:4vh;
+	height:7vh;
+	width:40%;
+}
+
+#checkout-but{
+	font-size:2em;
+	margin-left:1vw;
+	margin-top:4vh;
+	height:7vh;
+	width:50%;
+}
+
+.div-font{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size:150%;
+	font-weight:bold;
+	
+}
+
+
+/*XS screen size*/
+@media (max-width: 767px) {
+    #order-display {
+        height: 80vh;
+    }
+    
+    #cart-total-div {
+		font-size:0.8em;
+        height: 80vh;
+    }
+    
+    #order-cust-info {
+        height: 20vh;
+    }
+    
+    #order-div {
+        height: 75%;
+    }
+    
+    #order-submit-div {
+        height: 15%;
+    }
+    
+    #order-cancel-btn{
+        margin-top: 20px;
+        width: 80px;
+    }
+
+    #order-submit-btn{
+        width: 80px;
+    }
+	
+	h3{
+	font-size:0.7em;
+	}
+}
+
+
+/*SM screen size*/
+@media (min-width: 768px) and (max-width: 991px) {
+    #order-display {
+        height: 80vh;
+    }
+    
+    #cart-total-div {
+        height: 80vh;
+    }
+    
+    #order-cust-info {
+        height: 20vh;
+    }
+    
+    #order-div {
+        height: 75%;
+    }
+    
+    #order-submit-div {
+        height: 15%;
+    }
+    
+    #order-cancel-btn{
+        margin-top: 20px;
+        width: 80px;
+    }
+
+    #order-submit-btn{
+        width: 80px;
+    }
+	h3{
+	font-size:0.8em;
+	}
+}
+
+
+/*MD screen size*/
+@media (min-width: 992px) and (max-width: 1200px) {
+    #order-display {
+        height: 80vh;
+    }
+    
+    #cart-total-div {
+        height: 80vh;
+    }
+    
+    #order-cust-info {
+        height: 20vh;
+    }
+    
+    #order-div {
+        height: 75%;
+    }
+    
+    #order-submit-div {
+        height: 15%;
+    }
+    
+    #order-cancel-btn{
+        margin-top: 20px;
+        width: 80px;
+    }
+
+    #order-submit-btn{
+        width: 80px;
+    }
+}
+
+
+/*LG screen size*/
+@media (min-width: 1201px) {
+    #order-display {
+        height: 100vh;
+    }
+    
+    #cart-total-div {
+        height: 100vh;
+    }
+    
+    #order-cust-info {
+        height: 20vh;
+    }
+    
+    #order-div {
+        height: 75%;
+    }
+    
+    #order-submit-div {
+        height: 15%;
+    }
+    
+    #order-cancel-btn{
+        margin-top: 20px;
+        width: 80px;
+    }
+
+    #order-submit-btn{
+        width: 80px;
+    }
+}
+
+@media (max-height: 650px) {
+    #order-display {
+        height: 650px;
+    }
+    
+    #cart-total-div {
+        height: 650px;
+    }
+    
+    #order-cust-info {
+        height: 200px;
+    }
+    
+    #order-div {
+        height: 75%;
+    }
+    
+    #order-submit-div {
+        height: 15%;
+    }
+    
+    #order-cancel-btn{
+        margin-top: 20px;
+        width: 80px;
+    }
+
+    #order-submit-btn{
+        width: 80px;
+    }
+}

@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background-image: url(/images/Hoth_plains.jpg);
+}
+
+.form {
+    margin: 15px auto;
+    width: 50%;
+    text-align: center;
+}
+
+.buttons {
+    background-color: #333333;
+    color: #FDF8FF;
+    border: 1px solid #333333;
+}
+
+.buttons:hover {
+    background-color: black;
+    border: 1px solid black;
+}
+
+#profile_link {
+    color: #333333;
+}
+
+#cEmail {
+    padding-top: 100px;
+}
+
+#login {
+    display: none;
+}

@@ -1,0 +1,156 @@
+body {
+    text-align: center;
+    margin: 20px 0;
+    background-image: url(/images/login_1.jpg);
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.holder, .holder_2 {
+    background-color: rgba(50,50,50,0.8);
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.holder_2 {
+    margin: 50px auto;
+    position:relative;
+    width:95vw;
+}
+
+.fill-button {
+    width: 100%;
+    height:100%;
+}
+
+#logout_form {
+    
+}
+
+#item_up {
+
+}
+
+#logout {
+    margin-bottom: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+h3 {
+    color: white;
+}
+
+.i:hover {
+    color: black;
+}
+
+#orders, #hot_plate {
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.alert {
+    overflow-y: auto;
+    width: 90%;
+}
+
+.panel {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.pos {
+    position:relative;
+}
+
+.hot-plate-timer {
+    position:absolute;
+    right:10px;
+    top:5px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.hot-plate-qty {
+    position:absolute;
+    left:10px;
+    top:5px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+#progress {
+    margin: 50px auto;
+    width: 80vw;
+    background-color: rgba(150,150,150,0.6);
+}
+
+#controller {
+
+}
+
+#controller_2 {
+    display: none;
+}
+
+#timeout {
+    background-color: darkgrey;
+    color: black;
+    width: 0%;
+}
+
+#progress {
+    position:relative;
+}
+
+#percentage {
+    position:absolute;
+    left:50%;
+}
+
+#button {
+    margin: 50px auto;
+}
+
+#item-list {
+    transform: scale(1.5);
+}
+
+#item-list option {
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+}
+
+
+/*XS screen size*/
+@media (max-width: 600px) {
+}
+
+
+/*XS screen size*/
+@media (min-width: 601px) and (max-width: 767px) {
+}
+
+
+/*SM screen size*/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+/*MD screen size*/
+@media (min-width: 992px) and (max-width: 1200px) {
+}
+
+
+/*LG screen size*/
+@media (min-width: 1201px) and (max-width: 1535px) {
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Page</title>
+        
+        <link rel="icon" type="image/png" href="/images/Rebel-50.png"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script src="/scripts/adminbundle.js"></script>
+	
+        
+        
+        <link rel="stylesheet" href="/css/navigation.css"/>
+		<link rel="stylesheet" href="/css/footer.css"/>
+		<link rel="stylesheet" href="/css/scrollbar.css"/>
+        <link rel="stylesheet" href="/css/main.css"/>
+        <link rel="stylesheet" href="/css/food_item.css"/>
+        <link rel="stylesheet" href="/css/admin.css"/>
+        <link rel="icon" type="image/png" href="/images/Rebel-50.png"/>
+		
+        
+	</head>
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav id="navigation" class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="/" id="logo" class="navbar-brand"></a>
+                    <a href="/" id="title" class="navbar-brand">Rebel Hangar</a>
+                    
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a id="meal_link"  href="#meals">Meals</a></li>
+                        <li><a id="appetizer_link" href="#appetizers" >Appetizers</a></li>
+                        <li><a id="drink_link"  href="#drinks">Drinks</a></li>
+                        <li><a id="dessert_link"  href="#desserts">Desserts</a></li>
+						<li><a href="/adminuser">Admin User</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/logout" class="reg">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+		<div id="meals_holder" class="container-fluid">
+            <div class="text-center">
+                <p><img id="meal_img" class = "menu_icon" src="/images/hamburger.png" /></p>
+                <h1 text-align="center">Meals</h1>
+            </div>
+            
+            <div id="meal-items" class="container-fluid">
+            </div>
+        </div>
+    
+        <div id="appetizers_holder" class="container-fluid">
+            <div class="text-center">
+                <p><img id="appetizer_img" class = "menu_icon" src="/images/appetizer.png" /></p>
+                <h2 text-align="center">Appetizers</h2>
+            </div>
+            
+            <div id="app-items">
+            </div>
+        </div>
+        
+        <div id="drinks_holder" class="container-fluid">
+            <div class="text-center">
+                <p><img id="drinks_img" class = "menu_icon" src="/images/drinks.png" /></p>
+                <h2 text-align="center">Drinks</h2>
+            </div>
+            
+            <div id="drink-items">
+            </div>
+        </div>
+        
+        <div id="desserts_holder" class="container-fluid">
+            <div class="text-center">
+                <p><img id="dessert_img" class = "menu_icon" src="/images/dessert.png" /></p>
+                <h2 text-align="center">Desserts</h2>
+            </div>
+            
+            <div id="dessert-items">
+            </div>
+        </div>
+		
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Item Creator</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="item-code">Item Code:</label>
+                            <input type="text" class="form-control" id="item-code" placeholder="Item Code (no spaces)">
+                            <label for="item-name">Item Name:</label>
+                            <input type="text" class="form-control" id="item-name" placeholder="Item Name">
+                            <label for="item-cat">Item Categories:(Select one)</label>
+                                <select class="form-control" id="item-cat">
+                                    <option>Appetizers</option>
+                                    <option>Desserts</option>
+                                    <option>Drinks</option>
+                                    <option>Meals</option>
+                                </select>
+                            <label for="item-desc">Item Description:</label>
+                            <textarea class="form-control" rows="5" id="item-desc"></textarea>
+                            <label for="item-price">Item Price:</label>
+                            <input type="number" class="form-control" id="item-price" placeholder="Item Price">
+                            <label for="item-image">Item Image:</label>
+                            <input type="file" id= "item-image" name="item-image" accept="image/*">
+                            <button type="button" id="image-submit" class="btn btn-primary" >Submit</button>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button type="button" id="okayBut" class="btn btn-success" data-dismiss="modal">Okay</button>
+                    <!-- picture update success message div -->    
+                     <div id = 'picture-updated'>Picture Update success</div>
+                    <!-- picture update success message div END -->
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+
+            <button type="button" id="addbut"class="btn icon-btn btn-success" data-toggle="modal" data-target="#myModal" href="#">
+                <span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Add
+            </button>	
+
+		<footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <ul>          
+                            <h2>Food</h2>
+                            
+                            <ul>
+                                <li><a id="appetizer_link" href="#appetizers">Appetizers</a></li>
+                                <li><a id="dessert_link" href="#desserts">Desserts</a></li>
+                                <li><a id="drink_link" href="#drinks">Drinks</a></li>
+                                <li><a id="meal_link" href="#meals">Meals</a></li> 
+                            </ul>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3">
+                        <ul>
+                            <h2>Company</h2>
+                        
+                            <ul>
+                                <li><a id="about_link" href="#about">About Us</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3">
+                        <ul>
+                            <h2>Partnerships</h2>
+                            
+                            <ul>
+                                <li><a href="#">Dagobah Restaurant</a></li>
+                                <li><a href="#">Endor Restaurant</a></li>
+                                <li><a href="#">Jakku Restaurant</a></li>
+                                <li><a href="#">Kamino Restaurant</a></li>
+                                <li><a href="#">Mustafar Restaurant</a></li>
+                                <li><a href="#">Naboo Restaurant</a></li>
+                                <li><a href="#">Tatooine Restaurant</a></li>
+                            </ul>
+                        </ul> 
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3">
+                        <ul>
+                            <h2>Hoth Contact</h2>
+                            <div> 
+                                <h4>ACIT-2910 Team Hoth</h4>
+                                <p><b>Email:</b><a href="hoth email"> toohoth4you@hothplanet.com</a></p>
+                                <p><b>Phone Numbers : </b><br>1 (800) CALL-AMRIT </p>
+                            </div>
+                            
+                            <div class="social-div">
+                                <ul>
+                                    <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                                    <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+                                    <a href="#https://www.instagram.com" class="fa fa-instagram"></a>
+                                    <a href="#https://www.reddit.com/" class="fa fa-reddit"></a>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="copy">
+                                © 2017, ACFRR, All rights reserved.
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div>
+                                <span><a href="www.bcit.ca">Opportunities </a> | 
+                                <a  href="www.bcit.ca">Computer Information Technology</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+		
+        <!-- price update success message div -->
+        <div id = 'price-updated'>
+        Price Update success
+        
+        </div>
+        <!-- price update success message div end -->
+    </body>
+</html>

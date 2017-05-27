@@ -1,0 +1,99 @@
+body {
+    background-color: white;
+    margin: 0;
+    background: url(/images/Hoth_plains.jpg) no-repeat center top fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+table {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 100%;
+	font-size:1.5em;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+	background-color: dimgray;
+    color: white;
+    border: 2px solid #dddddd;
+    text-align: left;
+	padding-bottom: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: ghostwhite;
+}
+
+.order_number {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#order_list {
+	padding-left: 3vw;
+	padding-right: 3vw;
+    height: 70vh;
+    overflow-y: auto;
+}
+
+#current_orders {
+	padding-left: 3vw;
+	padding-right: 3vw;
+    height: 70vh;
+    overflow-y: auto;
+}
+
+h3 {
+    text-align: center;
+}
+
+.holder {
+    background-color: rgba(50,50,50,0.3);
+}
+
+.order_item {
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.num {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.order-wrapper {
+    text-align: center;
+    width: 100%;
+    margin:0px auto 0px auto;
+}
+
+.order-wrapper div {
+    display:inline-block;
+}
+
+.order-wrapper div:first-child {
+    width:15%;
+    font-size:26px;
+}
+
+.order-wrapper div:nth-child(2) {
+    width:60%;
+}
+
+.order-wrapper div:nth-child(3) {
+    width:25%;
+}

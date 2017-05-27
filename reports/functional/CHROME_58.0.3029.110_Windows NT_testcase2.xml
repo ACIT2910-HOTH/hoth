@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="functional.testcase2"
+    errors="0" failures="0" hostname="" id="" package="functional" skipped="0"
+    tests="1" time="16.72" timestamp="Tue, 23 May 2017 16:12:15 GMT">
+  
+    <testcase name="test RebelHanger Full order 1" classname="functional.testcase2" time="16.72" assertions="16">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        
+        <link rel="stylesheet" href="/css/main.css"/>
+		<link rel="stylesheet" href="/css/footer.css"/>
+        <link rel="stylesheet" href="/css/scrollbar.css"/>
+        <link rel="stylesheet" href="/css/food_item.css"/>
+        <link rel="stylesheet" href="/css/cart.css"/>
+        <link rel="stylesheet" href="/css/navigation.css"/>
+        <link rel="icon" type="image/png" href="/images/Rebel-50.png"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+        
+        <script src="/scripts/mainbundle.js"></script>
+        
+    </head>
+  
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        
+        <nav id="navigation" class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="/" id="logo" class="navbar-brand"></a>
+                    <a href="/" id="title" class="navbar-brand">Rebel Hangar</a>
+                    
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                
+               
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a id="meal_link"  href="#meals">Meals</a></li>
+                        <li><a id="appetizer_link" href="#appetizers" >Appetizers</a></li>
+                        <li><a id="drink_link"  href="#drinks">Drinks</a></li>
+                        <li><a id="dessert_link"  href="#desserts">Desserts</a></li>
+                        <li><a id="about_link"  href="#about">Our Team</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a data-toggle="collapse" data-target="#cart" id="cart_link">
+                                <span class="glyphicon glyphicon-shopping-cart"> <span class="badge" id="badge"></span></span>
+                            </a>
+                        </li>
+                        
+                        <!-- If user has id, hide login, else, show profile_link and logout_link -->
+                        
+                        <li><a id="profile_link" href="/profile" class="reg">Profile</a></li>
+                        <li><a id="logout_link" href="/logout" class="reg">Logout</a></li>
+                        
+                        <li><a id="login" href="/signin" class="reg">Login | Signup</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="cart" class="collapse well well-lg col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            
+            <div id="holder">
+            </div>
+            
+            <button class="btn btn-block" id="checkout">Checkout</button>
+        </div>
+        
+
+        <div id="meals_holder" class="container-fluid">
+            <div class="text-center">
+                 <div id = "closed">SORRY! WE ARE CLOSED</div>
+                <p><img id="meal_img" class = "menu_icon" src="/images/hamburger.png" /></p>
+                <h2 text-align="center">Meals</h2>
+            </div>
+            
+            <div id="meals" class="container-fluid">
+            </div>
+        </div>
+    
+        <div id="appetizers_holder" class="container-fluid">
+            <div class="text-center">
+                <p><img id="appetizer_img" class = "menu_icon" src="/images/appetizer.png" /></p>
+                <h2 text-align="center">Appetizers</h2>
+            </div>
+            
+            <div id="appetizers">
+            </div>
+        </div>
+        
+        <div id="drinks_holder" class="container-fluid">
+            <div class="text-center">
+                <p><img id="drinks_img" class = "menu_icon" src="/images/drinks.png" /></p>
+                <h2 text-align="center">Drinks</h2>
+            </div>
+            
+            <div id="drinks">
+            </div>
+        </div>
+        
+        <div id="desserts_holder" class="container-fluid">
+            <div class="text-center">
+                <p><img id="dessert_img" class = "menu_icon" src="/images/dessert.png" /></p>
+                <h2 text-align="center">Desserts</h2>
+            </div>
+            
+            <div id="desserts">
+            </div>
+        </div>
+
+        <div id="about">
+        <!-- Start of bosses piece -->
+            <div class="text-center">
+                <p><img id="dessert_img" class = "menu_icon" src="/images/aboutus.png" /></p>
+                <h2 text-align="center">Our Team</h2>
+            </div>
+            
+            <div id="about-right" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+
+                <div id="teamhoth_txt" > <h3>The Bosses</h3> </div>
+                <br>
+
+                <div class="row">
+
+                    <!-- Beginning of character -->
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="imgs_about_us">
+                                    <img id="imghoth" src="/images/char0.png" />
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>Jim Parry<br> Big Boss 1</h4>
+                            </div>
+                        </div>      
+                    </div>     
+                    <!--End of character -->
+                </div>
+
+                <div class="row">
+                    <!-- Beginning of character -->
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="imgs_about_us">
+                                    <img id="imghoth" src="/images/char00.png"/>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>Kim Pope<br> Big Boss 2</h4>
+                            </div>
+                        </div>      
+                    </div>     
+                    <!--End of character -->
+
+                </div>
+            </div>	
+            <!-- End of bosses piece -->
+
+            <!-- Start of team hoth piece -->
+            <div id="about-left" class="col-lg-9 col-md-9 col-sm-9 col-xs-6">
+
+                <div id="teamhoth_txt" > <h3>Team Hoth</h3> </div>
+                <br>
+
+                <!--First row of characters-->
+                <div class="row">
+
+                    <!-- Beginning of character -->
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="imgs_about_us">
+                                    <img id="imghoth" src="/images/char1.png"/>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>Alex Mori <br> Front-End</h4>
+                            </div>
+                        </div>      
+                    </div>     
+                    <!--End of character -->
+
+                    <!-- Beginning of character -->
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="imgs_about_us">
+                                    <img id="imghoth" src="/images/char2.png"/>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>Creighton Lee <br> Front-End</h4>
+                            </div>
+                        </div>      
+                    </div>     
+                    <!--End of character -->
+
+                    <!-- Beginning of character -->
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="imgs_about_us">
+                                    <img id="imghoth" src="/images/char3.png" />
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>Fan Zhang <br> Tester</h4>
+                            </div>
+                        </div>      
+                    </div>     
+                    <!--End of character -->
+
+                </div>
+
+                <!--Second row of characters-->
+                <div class="row">
+
+                    <!-- Beginning of character -->
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="imgs_about_us">
+                                    <img id="imghoth" src="/images/char4.png"/>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>Roger Chin <br> Back-End</h4>
+                            </div>
+                        </div>      
+                    </div>     
+                    <!--End of character -->
+
+                    <!-- Beginning of character -->
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="imgs_about_us">
+                                    <img id="imghoth" src="/images/char5.png"/>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>Rui Guo <br> Back-End</h4>
+                            </div>
+                        </div>      
+                    </div>     
+                    <!--End of character -->
+
+                </div>
+            </div>
+        <!-- End of team hoth piece -->
+        </div>
+        
+        <div class="container-fluid"></div>
+        
+		<footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <ul>          
+                            <h2>Food</h2>
+                            
+                            <ul>
+                                <li><a id="appetizer_link" href="#appetizers">Appetizers</a></li>
+                                <li><a id="dessert_link" href="#desserts">Desserts</a></li>
+                                <li><a id="drink_link" href="#drinks">Drinks</a></li>
+                                <li><a id="meal_link" href="#meals">Meals</a></li> 
+                            </ul>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3">
+                        <ul>
+                            <h2>Company</h2>
+                        
+                            <ul>
+                                <li><a id="about_link" href="#about">About Us</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3">
+                        <ul>
+                            <h2>Partnerships</h2>
+                            
+                            <ul>
+                                <li><a href="#">Dagobah Restaurant</a></li>
+                                <li><a href="#">Endor Restaurant</a></li>
+                                <li><a href="#">Jakku Restaurant</a></li>
+                                <li><a href="#">Kamino Restaurant</a></li>
+                                <li><a href="#">Mustafar Restaurant</a></li>
+                                <li><a href="#">Naboo Restaurant</a></li>
+                                <li><a href="#">Tatooine Restaurant</a></li>
+                            </ul>
+                        </ul> 
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3">
+                        <ul>
+                            <h2>Hoth Contact</h2>
+                            <div> 
+                                <h4>ACIT-2910 Team Hoth</h4>
+                                <p><b>Email:</b><a href="hoth email"> toohoth4you@hothplanet.com</a></p>
+                                <p><b>Phone Numbers : </b><br>1 (800) CALL-AMRIT </p>
+                            </div>
+                            
+                            <div class="social-div">
+                                <ul>
+                                    <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                                    <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+                                    <a href="#https://www.instagram.com" class="fa fa-instagram"></a>
+                                    <a href="#https://www.reddit.com/" class="fa fa-reddit"></a>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="copy">
+                                © 2017, ACFRR, All rights reserved.
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div>
+                                <span><a href="www.bcit.ca">Opportunities </a> | 
+                                <a  href="www.bcit.ca">Computer Information Technology</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+            
+        <div id="warning">
+            <div id="warning-container">                
+            </div>
+        </div>   
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thank You!</title>
+        
+        <link rel="icon" type="image/png" href="/images/Rebel-50.png"/>
+        <link rel="stylesheet" href="/css/submitted.css"/>
+        <link rel="stylesheet" href="/css/scrollbar.css"/>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/scripts/submittedbundle.js"></script>
+    </head>
+    
+    <body>
+        <div class="order_number">
+            <h2>Order #<span id="order_num"></span> has been placed!</h2>
+        </div>
+            
+        <div class="holder col-xs-12 col-sm-5 col-md-5 col-lg-5 center-block">
+            <h3>Your order:</h3>
+
+            <div id="order_list">
+                <!--
+                EXAMPLE OF AN ORDER ITEM
+                <div class="order_item">Hoth Dog x7</div>
+                -->
+				<table id="table">
+					<tr>
+					<th>ITEM</th>
+					<th>QUANTITY</th>
+					</tr>
+				</table>
+            </div>
+        </div>
+
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        
+        <div class="holder col-xs-12 col-sm-6 col-md-6 col-lg-6 center-block">
+            <h3>Orders Being Processed:</h3>
+            
+            <div id="current_orders">
+                    <!--                
+                    EXAMPLE OF AN ORDER
+                    <div class="num">Order #1</div>
+                    -->
+            </div>
+        </div>
+    </body>
+</html>
