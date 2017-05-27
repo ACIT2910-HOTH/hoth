@@ -10425,7 +10425,6 @@ return jQuery;
                     item:orderItem
                 },
                 success:function(resp){
-                    console.log(resp);
                     itemName.push(resp.name);
                     itemPrice.push(parseFloat(resp.price));
                 },
@@ -10443,7 +10442,6 @@ return jQuery;
                 totalPrice:totalPrice + tax
             },
             success:function(resp){
-				console.log(orderId)
                 var orderId = resp.id;
 
                 socket.emit("send order", orderId);
@@ -10460,15 +10458,18 @@ return jQuery;
                         },
                         success:function(res){
                             if (res.status == "success") {
+                                location.reload();
+
                                 location.href = "/order/submitted/" + orderId;
                             }
                         }
                     });
                 }
             },
-        async: false
+            async: false
         });
     });
+    
     
     cancelButton.addEventListener("click",function(){
         location.href = "/"

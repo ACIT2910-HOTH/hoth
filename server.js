@@ -25,7 +25,7 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 
 
-var dbURL = process.env.DATABASE_URL || "postgres://postgres:REBELHANGER@localhost:5432/kitchen";
+var dbURL = process.env.DATABASE_URL || "postgres://localhost:5432/kitchen";
 
 var usernameRegex = /[a-zA-Z0-9\-_]{4,20}/;
 var nameRegex = /^[a-zA-Z]{1,15}$/;
@@ -229,8 +229,6 @@ app.post("/get/price",function(req,resp){
                 });
             }
 
-            console.log(result.rows);
-
             if (result != undefined && result.rows.length > 0) {
                 resp.send({
                     status:"success",
@@ -238,34 +236,6 @@ app.post("/get/price",function(req,resp){
                     name:result.rows[0].item_name
                 });
             }
-        });
-    //});
-});
-
-app.post("/save/order",function(req,resp){
-    console.log(req.body)
-    //pg.connect(dbURL,function(err,client,done){
-        /*if(err){
-            console.log(err);
-            resp.send({
-                status:"fail",
-                message:"database connection err"});
-        }*/
-        client.query("INSERT INTO hoth_orders (customer,total_price) VALUES ($1,$2) RETURNING order_id",[req.session.username,req.body.totalPrice],function(err,result){
-            //done();
-            if(err){
-                console.log(err);
-                resp.sent({
-                    status:"faile"
-                });
-            } else {
-                resp.send({
-                    status:"success",
-                    id:result.rows[0].order_id
-                });
-            }
-            
-            
         });
     //});
 });
@@ -298,34 +268,62 @@ app.post("/order/detailes",function(req,resp){
     
 });
 
+app.post("/save/order",function(req,resp){
+    //pg.connect(dbURL,function(err,client,done){
+        /*if(err){
+            console.log(err);
+            resp.send({
+                status:"fail",
+                message:"database connection err"});
+        }*/
+        client.query("INSERT INTO hoth_orders (customer,total_price) VALUES ($1,$2) RETURNING order_id",[req.session.username,req.body.totalPrice],function(err,result){
+            //done();
+            if(err){
+                console.log(err);
+                resp.sent({
+                    status:"faile"
+                });
+            } else {
+                resp.send({
+                    status:"success",
+                    id:result.rows[0].order_id
+                });
+            }
+
+            req.session.orderid = result.rows[0].order_id;
+            req.session.user_order_id = result.rows[0].order_id;
+            req.session.save();
+        });
+    //});
+});
+
 app.post("/submit/order", function(req, resp) {
     //pg.connect(dbURL, function(err, client, done) {
-        client.query("SELECT * FROM hoth_order_details INNER JOIN hoth_items ON hoth_order_details.item_name = hoth_items.item_name WHERE hoth_order_details.order_id = $1", [req.session.orderid], function(err, result) {
-            //done();
+        if (req.session.orderid == req.session.user_order_id) {
+            client.query("SELECT * FROM hoth_order_details INNER JOIN hoth_items ON hoth_order_details.item_name = hoth_items.item_name WHERE hoth_order_details.order_id = $1", [req.session.orderid], function(err, result) {
 
-            if (err) {
-                console.log(err);
-            }
-
-            var obj = {}
-
-            console.log(result);
-
-            if (result != undefined && result.rows.length > 0) {
-                obj["0"] = {
-                    order_id: result.rows[0].order_id,
-                    items: {},
-                    item_code: {}
+                if (err) {
+                    console.log(err);
                 }
 
-                for (var i = 0; i < result.rows.length; i++) {
-                    obj["0"].items[result.rows[i].item_name] = result.rows[i].quantity;
-                    obj["0"].item_code[result.rows[i].item_name] = result.rows[i].item_code;
-                }
+                var obj = {}
 
-                resp.send(obj);
-            }
-        });
+                if (result != undefined && result.rows.length > 0) {
+                    obj["0"] = {
+                        order_id: result.rows[0].order_id,
+                        items: {},
+                        item_code: {}
+                    }
+
+                    for (var i = 0; i < result.rows.length; i++) {
+                        obj["0"].items[result.rows[i].item_name] = result.rows[i].quantity;
+                        obj["0"].item_code[result.rows[i].item_name] = result.rows[i].item_code;
+                    }
+
+                    resp.send(obj);
+                }
+            });
+        }
     //});
 });
 
@@ -334,8 +332,6 @@ app.post("/start-kitchen", function(req, resp) {
     //pg.connect(dbURL, function(err, client, done) {
         client.query("SELECT hoth_order_details.*, hoth_items.item_code FROM hoth_order_details INNER JOIN hoth_items ON hoth_order_details.item_name = hoth_items.item_name WHERE hoth_order_details.status = 'N' AND hoth_order_details.order_id IN (SELECT order_id FROM hoth_orders WHERE status = 'N' ORDER BY order_id LIMIT $1) ORDER BY hoth_order_details.order_id", [req.body.count], function(err, result) {
             //done();
-
-            console.log(req.body.count);
 
             var index = 0;
             var lastItem = 0;
@@ -379,10 +375,6 @@ app.post("/update/status", function(req, resp) {
 
             if (err) {
                 console.log(err);
-            }
-
-            if (result != undefined && result.rows.length > 0) {
-                console.log(result.rows);
             }
         })
     //})
@@ -779,7 +771,6 @@ app.get("/", function(req, resp) {
     if(req.session.username == undefined){
         req.session.username = 'guest'
     }
-    console.log(req.session.username);
 
     if (req.session.auth == "A") {
         resp.sendFile(pF + "/admin.html");
@@ -846,6 +837,7 @@ app.get("/checkout", function(req, resp) {
 
 app.get("/order/submitted/:orderid", function(req, resp) {
     req.session.orderid = req.params.orderid;
+    console.log(req.session.orderid);
     
     resp.sendFile(pF + "/submitted.html");
 });
